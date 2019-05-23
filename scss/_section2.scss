@@ -4,9 +4,10 @@ $light-shade: #eee;
 
 
 #section-2{
-    background-color:$background-shade;
+    background-color:$light-shade;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 200px;
 }

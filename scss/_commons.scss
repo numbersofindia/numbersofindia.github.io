@@ -9,6 +9,13 @@ body{
     margin: 0;
 }
 
+#main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
 .jumbo-title{
     font-family: $big-title-font;
     font-size: $jumbo-size;

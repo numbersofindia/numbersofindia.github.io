@@ -3,9 +3,17 @@ $dark-shade: #333;
 $light-shade: #eee;
 
 #section-1{
-    background-color:$light-shade;
+    background-color:$dark-shade;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#deck-map{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
