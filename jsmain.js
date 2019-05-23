@@ -1,3 +1,3 @@
 "use strict";window.onload=function(){section1(),section2()};
-"use strict";function section1(){console.log("Section1")}
+"use strict";function section1(){new Deck({canvas:"deck-canvas",width:"100%",height:"700px",initialViewState:{latitude:20,longitude:78,zoom:4,bearing:0,pitch:60},controller:!0,layers:[new TileLayer({opacity:.1,minZoom:0,maxZoom:19,renderSubLayers:function(e){var t=e.tile,i=t.x,o=t.y,n=t.z,a=t.bbox,c=a.west,s=a.south,l=a.east,r=a.north;return new BitmapLayer(e,{image:"https://abcd.basemaps.cartocdn.com/light_nolabels".concat("/",n,"/").concat(i,"/").concat(o,".png"),bounds:[c,s,l,r]})}}),new GeoJsonLayer({data:"res/india_pc_2019_simplified.geojson",stroked:!0,filled:!0,lineWidthMinPixels:.4,opacity:.6,getLineColor:[255,255,255],getFillColor:[243,158,18,255]})]})}
 "use strict";function section2(){console.log("Section2")}
