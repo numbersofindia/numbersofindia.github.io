@@ -1,0 +1,24 @@
+$big-title-font : 'Josefin Sans';
+$small-title-font : 'VT323';
+$content-font : 'Roboto Condensed';
+$jumbo-size: 10rem;
+
+body{
+    text-align: center;
+    font-family: $content-font;
+    margin: 0;
+}
+
+.jumbo-title{
+    font-family: $big-title-font;
+    font-size: $jumbo-size;
+}
+
+.big-title{
+    font-family: $big-title-font;
+}
+
+
+.small-title{
+    font-family: $small-title-font;
+}

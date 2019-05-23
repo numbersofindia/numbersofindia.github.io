@@ -1,0 +1,11 @@
+$background-shade: #c0392b;
+$dark-shade: #333;
+$light-shade: #eee;
+
+#section-1{
+    background-color:$light-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
