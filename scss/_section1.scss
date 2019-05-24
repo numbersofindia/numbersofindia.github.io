@@ -1,9 +1,10 @@
 $background-shade: #c0392b;
 $dark-shade: #333;
 $light-shade: #eee;
+$darkest: #122431;
 
 #section-1{
-    background-color:$dark-shade;
+    background-color:$darkest;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -9,5 +9,9 @@ $light-shade: #eee;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 200px;
+}
+
+#leaflet-map{
+   height: 400px;
+   width: 50%;
 }
