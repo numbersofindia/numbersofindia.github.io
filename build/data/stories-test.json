@@ -1,20 +1,20 @@
 [
     {
-        "title": "Mishtidoi",
-        "description": "Analysis on Indian Food Landscape [Zomato]" ,
-        "link": "https://vivekaithal.co/mishtidoi",
-        "img": "./res/imgs/mishtidoi.png",
-        "tags": ["food"],
-        "date": "Jan 2019",
+        "title": "What it really takes to go Green",
+        "description": "Data story in The Ken on India's energy policy and a peek at sustainable India." ,
+        "link": "https://the-ken.com/story/india-green-energy-charts/",
+        "img": "./res/imgs/ken-energy.jpg",
+        "tags": ["politics"],
+        "date": "April 2019",
         "author": "Vivek Aithal"
     },
     {
         "title": "Mishtidoi",
-        "description": "Analysis on Indian Food Landscape [Zomato]" ,
+        "description": "Analysis on Indian Food Landscape with data scraped from Zomato." ,
         "link": "https://vivekaithal.co/mishtidoi",
         "img": "./res/imgs/mishtidoi.png",
-        "tags": ["politics"],
-        "date": "Jan 2019",
+        "tags": ["food"],
+        "date": "Feb 2019",
         "author": "Vivek Aithal"
     },
     {

@@ -1,20 +1,38 @@
 [
     {
-        "title": ,
-        "description": ,
-        "link": ,
-        "img": ,
-        "tags": [],
-        "date": ,
-        "author": ,
+        "title": "What it really takes to go Green",
+        "description": "Data story in The Ken on India's energy policy and a peek at sustainable India." ,
+        "link": "https://the-ken.com/story/india-green-energy-charts/",
+        "img": "./res/imgs/ken-energy.jpg",
+        "tags": ["politics"],
+        "date": "April 2019 [Pre NOI]",
+        "author": "Vivek Aithal"
     },
     {
-        "title": ,
-        "description": ,
-        "link": ,
-        "img": ,
-        "tags": [],
-        "date": ,
-        "author": ,
+        "title": "Mishtidoi",
+        "description": "Analysis on Indian Food Landscape with data scraped from Zomato." ,
+        "link": "https://vivekaithal.co/mishtidoi",
+        "img": "./res/imgs/mishtidoi.png",
+        "tags": ["food"],
+        "date": "Feb 2019 [Pre NOI]",
+        "author": "Vivek Aithal"
     },
+    {
+        "title": "Shout It Out!",
+        "description": "Breakdown and analysis of one highly toxic episode of Arnab Goswami's debate show on Republic" ,
+        "link": "https://vivekaithal.co/shoutitout",
+        "img": "./res/imgs/arnab.png",
+        "tags": ["news","politics"],
+        "date": "Oct 2017 [Pre NOI]",
+        "author": "Vivek Aithal"
+    },
+    {
+        "title": "Twenty Two Yards",
+        "description": "An ELO-inspired rating system for IPL teams, over the seasons" ,
+        "link": "https://vivekaithal.co/twentytwoyards",
+        "img": "./res/imgs/ipl.png",
+        "tags": ["sports"],
+        "date": "Sep 2017 [Pre NOI]",
+        "author": "Vivek Aithal"
+    }
 ]

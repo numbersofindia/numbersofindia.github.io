@@ -4,7 +4,7 @@ function section3(){
         $(this).addClass('active-button');
     });
 
-    $.getJSON("./data/stories-test.json", function(json) {
+    $.getJSON("./data/stories.json", function(json) {
         // console.log(json); // this will show the info it in firebug console
         $.each(json,function(key, value){
             // console.log(key, value);
