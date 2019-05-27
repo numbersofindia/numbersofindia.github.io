@@ -2,13 +2,19 @@ $big-title-font : 'Josefin Sans';
 $small-title-font : 'VT323';
 $content-font : 'Roboto Condensed';
 $jumbo-size: 10rem;
+$break-small: 320px;
+$break-large: 1200px;
 
 body{
     text-align: center;
     font-family: $content-font;
     margin: 0;
+    font-size: 1.5em;
 }
-
+p{
+    margin:0;
+    padding: 0;
+}
 #main{
     display: flex;
     flex-direction: column;
@@ -18,7 +24,13 @@ body{
 
 .jumbo-title{
     font-family: $big-title-font;
-    font-size: $jumbo-size;
+    font-size: 1rem;
+    @media screen and (min-width: $break-small) {
+        letter-spacing: 10px;
+      }
+    @media screen and (min-width: $break-large) {
+        letter-spacing: 20px;
+    }
 }
 
 .big-title{
@@ -28,4 +40,9 @@ body{
 
 .small-title{
     font-family: $small-title-font;
+    text-align: justify;
+}
+
+.row{
+    margin: 0 !important;
 }

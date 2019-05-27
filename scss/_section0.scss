@@ -4,11 +4,16 @@ $light-shade: #eee;
 
 
 #section-0{
-    background-color:$background-shade;
+    background-color:#122431;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: $light-shade;
-    height: 700px;
+    height: 100vh;
+}
+
+#title-canvas{
+    opacity: 0.15;
+    position: absolute;
 }

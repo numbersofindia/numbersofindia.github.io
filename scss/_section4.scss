@@ -1,0 +1,52 @@
+#section-4{
+    background: #122431;
+    color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.poem{
+    font-size: 0.6em;
+    // padding-left: 40px;
+    // padding-right: 40px;
+    &>a{
+        text-decoration: none;
+        color: #fff;
+
+    }
+}
+
+.fab{
+    cursor: pointer;
+    padding: 10px;
+}
+
+.footer-div{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-tinyletter-link{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.5em;
+}
+.footer-tinyletter-button{
+    width: 85%;
+    margin: 10px;
+    padding: 5px;
+    background: #fff;
+    border: none;
+    border-radius:3px;
+}
+
+.footer-tinyletter-input{
+    width: 95%;
+    border-radius:3px;
+    padding: 5px;
+    border: none;
+}

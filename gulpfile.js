@@ -64,16 +64,22 @@ function res() {
         .pipe(dest('build/res'))
 }
 
+function imgs() {
+    return src('res/imgs/*')
+        .pipe(dest('build/res/imgs'))
+}
+
 function watchFiles() {
     gulp.watch("./scss/*", css);
     gulp.watch("./js/*", js);
     gulp.watch("./*.html", html);
     gulp.watch("./data/*", data);
     gulp.watch("./res/*", res);
+    gulp.watch("./res/imgs/*", imgs);
 }
 
 const watch = gulp.parallel(watchFiles, browserSync);
-const build = gulp.series(cleanify,gulp.parallel(css, html, js, data, res));
+const build = gulp.series(cleanify,gulp.parallel(css, html, js, data, res, imgs));
 
 
 exports.js = js;
