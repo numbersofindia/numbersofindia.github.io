@@ -1,5 +1,5 @@
 $big-title-font : 'Josefin Sans';
-$small-title-font : 'VT323';
+$small-title-font : 'Roboto Condensed';
 $content-font : 'Roboto Condensed';
 $jumbo-size: 10rem;
 $break-small: 320px;
@@ -41,6 +41,7 @@ p{
 .small-title{
     font-family: $small-title-font;
     text-align: justify;
+    font-size: 0.8em;
 }
 
 .row{
