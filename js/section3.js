@@ -18,6 +18,7 @@ function section3(){
             });
             let tempCardBody = $("<div class='card-body'></div>")
             const tempTitle = $("<p class='card-title'></p>").text(value.title);
+            const tempReadTime = $("<p class='card-read-time'></p>").text("5 min read");
             const tempDescription = $("<p class='card-description'></p>").text(value.description);
             const tempImage = $("<img src='"+value.img+"' class='col-md-12 col-xs-12 col-sm-12 col-lg-12'></img>");
             const tempAuthor = $("<p class='card-author'></p>").text('By '+value.author);
@@ -25,7 +26,7 @@ function section3(){
             let tempCardFooter = $("<div class='card-footer'></div>");
             tempCardFooter.append(tempAuthor).append(tempDate);
             tempCardBody.append(tempTitle).append(tempDescription).append(tempTagBar).append(tempCardFooter);
-            tempDiv.addClass(tempClasses).append(tempImage).append(tempCardBody);
+            tempDiv.addClass(tempClasses).append(tempImage).append(tempCardBody).append(tempReadTime);
             $('#cards-container').append(tempDiv);
 
 

@@ -49,6 +49,7 @@
     margin-bottom: 20px;
     text-decoration: none;
     color: #000;
+    position: relative;
 }
 
 .card-title, .card-description, .card-author, .card-date{
@@ -169,7 +170,7 @@
 }
 
 #cards-container{
-    min-height: 600px;
+    // min-height: 600px;
     margin-top: 50px;
 }
 
@@ -199,4 +200,30 @@
 }
 .tinyletter-form{
     margin-top: 30px;   
+}
+
+
+#section-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#airtable{
+    width: 100%;
+    padding: 50px;
+    background: #eee;
+}
+
+.card-read-time{
+    position: absolute;
+    top: 5px;
+    font-size: 0.5em;
+    padding: 3px 7px;
+    background: #fff;
+    border-radius: 20px;
+    color: #333;
+    right: 20px;
+    border: 1px solid #eee;
 }
