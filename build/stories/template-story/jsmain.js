@@ -1,0 +1,2 @@
+"use strict";window.onload=function(){section1()};
+"use strict";function section1(){new Deck({canvas:"deck-canvas",width:"100%",height:"700px",initialViewState:{latitude:20,longitude:78,zoom:4,bearing:0,pitch:60},controller:!0,layers:[new GeoJsonLayer({data:"../../res/india_pc_2019_simplified.geojson",stroked:!0,filled:!0,lineWidthMinPixels:.4,opacity:.4,getLineColor:[255,255,255],getFillColor:[22,168,175,255]})]})}

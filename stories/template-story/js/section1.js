@@ -1,5 +1,5 @@
 function section1() {
-    const INDIA_GEOJSON = 'res/india_pc_2019_simplified.geojson'; //eslint-disable-line
+    const INDIA_GEOJSON = '../../res/india_pc_2019_simplified.geojson'; //eslint-disable-line
 
     const INITIAL_VIEW_STATE = {
         latitude: 20,
