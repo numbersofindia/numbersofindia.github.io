@@ -11,7 +11,7 @@ function section1() {
 
     const deck = new Deck({
         canvas: 'deck-canvas',
-        width: '100%',
+        width: '60%',
         height: '700px',
         initialViewState: INITIAL_VIEW_STATE,
         controller: true,

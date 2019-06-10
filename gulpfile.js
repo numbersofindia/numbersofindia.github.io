@@ -87,8 +87,9 @@ const build = gulp.series(gulp.parallel(css, html, js, data, res, imgs));
 
 
 const storyLocation = argv.story;
+const storyURL = 'https://numbersofindia.github.io/'+storyLocation;
 console.log("storyLocation", storyLocation);
-
+console.log("storyURL", storyURL);
 
 function browserSyncStory() {
     bs.init({
@@ -125,7 +126,7 @@ function htmlStory(){
     // console.log('dirnme',__dirname);
     // nunjucks.configure('./html-templates');
     return src(storyLocation+'index.html')
-        .pipe(nunjucks.compile({},{
+        .pipe(nunjucks.compile({url:storyURL},{
             env: new nunjucks_lib.Environment(new nunjucks_lib.FileSystemLoader('./html-templates'))
           }))
         .pipe(dest('build/'+storyLocation))
@@ -150,11 +151,11 @@ function resStory() {
 }
 
 function watchStory() {
-    gulp.watch(storyLocation+"/scss/*", cssStory);
-    gulp.watch(storyLocation+"/js/*", jsStory);
-    gulp.watch(storyLocation+"/*.html", htmlStory);
-    gulp.watch(storyLocation+"/data/*", dataStory);
-    gulp.watch(storyLocation+"/res/*", resStory);
+    gulp.watch(storyLocation+"scss/*", cssStory);
+    gulp.watch(storyLocation+"js/*", jsStory);
+    gulp.watch(storyLocation+"*.html", htmlStory);
+    gulp.watch(storyLocation+"data/*", dataStory);
+    gulp.watch(storyLocation+"res/*", resStory);
 }
 
 const watchstory = gulp.parallel(watchStory, browserSyncStory);

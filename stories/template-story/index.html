@@ -21,6 +21,13 @@
 <body>
     {% include "fb.html" %}
     <div id="main">
+        <div id="navbar">
+            <div style="justify-content: center; display: flex; flex-direction: column"><p class="nav-items">Numbers of India</p></div>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
+                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                <a class="nav-items" href="#footer">Contact</a>
+            </div>
+        </div>
         <div id="section-0">
             
         </div>
@@ -33,7 +40,8 @@
         <!-- <div id="section-2">
             <div id="leaflet-map"></div>
         </div> -->
-        
+
+        {% include "sharing.html" %}
         {% include "footer.html" %}
 
     </div>
