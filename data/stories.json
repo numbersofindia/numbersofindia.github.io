@@ -6,6 +6,8 @@
         "img": "./res/imgs/ken-energy.jpg",
         "tags": ["politics"],
         "date": "April 2019 [Pre NOI]",
+        "read_time": 15,
+        "story_type": "story",
         "author": "Vivek Aithal"
     },
     {
@@ -13,8 +15,10 @@
         "description": "Analysis on Indian Food Landscape with data scraped from Zomato." ,
         "link": "https://vivekaithal.co/mishtidoi",
         "img": "./res/imgs/mishtidoi.png",
-        "tags": ["food"],
+        "tags": ["entertainment","business"],
         "date": "Feb 2019 [Pre NOI]",
+        "read_time": 15,
+        "story_type": "story",
         "author": "Vivek Aithal"
     },
     {
@@ -24,6 +28,8 @@
         "img": "./res/imgs/arnab.png",
         "tags": ["news","politics"],
         "date": "Oct 2017 [Pre NOI]",
+        "read_time": 10,
+        "story_type": "story",
         "author": "Vivek Aithal"
     },
     {
@@ -33,6 +39,153 @@
         "img": "./res/imgs/ipl.png",
         "tags": ["sports"],
         "date": "Sep 2017 [Pre NOI]",
+        "read_time": 10,
+        "story_type": "story",
         "author": "Vivek Aithal"
+    },
+    {
+        "title": "Loksabha Snapshot 2014",
+        "description": "Characteristics of LS MPs 2014" ,
+        "link": "http://numbersofindia.github.io/stories/ls2014/",
+        "img": "./res/imgs/ls2014.jpg",
+        "tags": ["politics"],
+        "date": "Sep 2017 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Vivek Aithal"
+    },
+    {
+        "title": "Diwali Wali Pollution",
+        "description": "Air quality and Noise levels on Diwali" ,
+        "link": "http://numbersofindia.github.io/stories/pollution/",
+        "img": "./res/imgs/pollution.png",
+        "tags": ["news"],
+        "date": "Oct 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Roadway to Heaven",
+        "description": "Fatalities on Roads in India" ,
+        "link": "http://numbersofindia.github.io/stories/road-accidents/",
+        "img": "./res/imgs/road_accidents.png",
+        "tags": ["news"],
+        "date": "Aug 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "MBA Monies",
+        "description": "Job offer report of Indian B-Schools report (class of 2015)" ,
+        "link": "http://numbersofindia.github.io/stories/bschool/",
+        "img": "./res/imgs/bschools.png",
+        "tags": ["news","business"],
+        "date": "May 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "My Name is Khan",
+        "description": "Character names portrayed by bollywood Khans" ,
+        "link": "http://numbersofindia.github.io/stories/khans/",
+        "img": "./res/imgs/khans.jpg",
+        "tags": ["entertainment"],
+        "date": "Apr 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    
+    {
+        "title": "Boss Women",
+        "description": "Educational DNA of Indian women corporate heads and entrepreneurs" ,
+        "link": "http://numbersofindia.github.io/stories/gender/",
+        "img": "./res/imgs/gender.png",
+        "tags": ["business"],
+        "date": "Mar 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Incredible India!",
+        "description": "Domestic and Foreign tourists to Indian historical sites" ,
+        "link": "http://numbersofindia.github.io/stories/tourists/",
+        "img": "./res/imgs/tourists.png",
+        "tags": ["news"],
+        "date": "Mar 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Permanent Roommates",
+        "description": "TVF Permanent Roommates - Season 1 Report" ,
+        "link": "http://numbersofindia.github.io/stories/tvf/",
+        "img": "./res/imgs/tvf.jpg",
+        "tags": ["entertainment"],
+        "date": "Feb 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "IPL Snapshot",
+        "description": "Journey of IPL teas across 8 seasons" ,
+        "link": "http://numbersofindia.github.io/stories/ipl/",
+        "img": "./res/imgs/ipl2.jpg",
+        "tags": ["sports"],
+        "date": "Feb 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Bollywood Sequels",
+        "description": "IMDB Ratings of Bollywood Sequels" ,
+        "link": "http://numbersofindia.github.io/stories/bollywood-ratings/",
+        "img": "./res/imgs/bollywood.png",
+        "tags": ["entertainment"],
+        "date": "Jan 2016 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    
+    {
+        "title": "Population Nation",
+        "description": "Population Density (2015)" ,
+        "link": "http://numbersofindia.github.io/stories/population-density/",
+        "img": "./res/imgs/population.jpg",
+        "tags": ["news"],
+        "date": "Dec 2015 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Rising Mercury",
+        "description": "5 year annual average temperature in India" ,
+        "link": "http://numbersofindia.github.io/stories/rising-temperature/",
+        "img": "./res/imgs/temperature.png",
+        "tags": ["news"],
+        "date": "Dec 2015 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
+    },
+    {
+        "title": "Startup Tales",
+        "description": "100 Startups of India (2015)" ,
+        "link": "http://numbersofindia.github.io/stories/startups/",
+        "img": "./res/imgs/startups.jpg",
+        "tags": ["news","business"],
+        "date": "Dec 2015 [Pre NOI]",
+        "read_time": 2,
+        "story_type": "infographic",
+        "author": "Akash Mukherjee"
     }
 ]

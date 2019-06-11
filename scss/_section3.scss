@@ -1,4 +1,7 @@
-  #descrip {
+
+$chip-color: #333;
+
+#descrip {
       position:relative;
       margin:50px auto ;
       padding-top:40px;
@@ -120,7 +123,7 @@
 }
 
 
-.active-button.food-filter{
+.active-button.business-filter{
     &:after{
         background-color: #f1c40f;
     }
@@ -160,7 +163,7 @@
     background-color: #27ae60;
 }
 
-.tag-bar-food{
+.tag-bar-business{
     background-color: #f1c40f;
 }
 
@@ -218,12 +221,39 @@
 
 .card-read-time{
     position: absolute;
+    display: flex;
+    flex-direction: row;
     top: 5px;
     font-size: 0.5em;
-    padding: 3px 7px;
+    // padding: 3px 7px;
     background: #fff;
     border-radius: 20px;
     color: #333;
     right: 20px;
-    border: 1px solid #eee;
+    border: 1px solid $chip-color;
+}
+
+.card-story-type{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 5px;
+    font-size: 0.5em;
+    // padding: 3px 7px;
+    background: #fff;
+    border-radius: 20px;
+    color: #333;
+    left: 20px;
+    border: 1px solid $chip-color;
+}
+
+.top-icons{
+    background: $chip-color;
+    padding: 3px 5px;
+    border-radius: 15px 0px 0px 15px;
+    color: #fff;
+}
+
+.card-read-time-text, .card-story-type-text{
+    padding: 3px 5px;
 }

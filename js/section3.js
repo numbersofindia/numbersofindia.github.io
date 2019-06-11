@@ -17,16 +17,28 @@ function section3(){
                 tempTagBar.append('<div class="tag-bar tag-bar-'+v+'"></div>');
             });
             let tempCardBody = $("<div class='card-body'></div>")
+            const tempLeft = $("<div class='card-story-type'></div>");
+            const tempRight = $("<div class='card-read-time'></div>");
             const tempTitle = $("<p class='card-title'></p>").text(value.title);
-            const tempReadTime = $("<p class='card-read-time'></p>").text("5 min read");
+            const tempReadTime = $("<p class='card-read-time-text'></p>").text(value.read_time + " mins");
+            var tempStoryType = '';
+            if(value.story_type==="infographic"){
+                tempStoryType = $("<p class='card-story-type-text'></p>").text("Infographic");
+            }
+            else{
+                tempStoryType = $("<p class='card-story-type-text'></p>").text("Data Story");
+            }
             const tempDescription = $("<p class='card-description'></p>").text(value.description);
             const tempImage = $("<img src='"+value.img+"' class='col-md-12 col-xs-12 col-sm-12 col-lg-12'></img>");
             const tempAuthor = $("<p class='card-author'></p>").text('By '+value.author);
             const tempDate = $("<p class='card-date'></p>").text(value.date);
             let tempCardFooter = $("<div class='card-footer'></div>");
             tempCardFooter.append(tempAuthor).append(tempDate);
+            tempRight.append($('<i class="far fa-clock top-icons"></i>')).append(tempReadTime);
+            tempLeft.append($('<i class="fas fa-pencil-alt top-icons"></i>')).append(tempStoryType);
+            tempLeft.append(tempStoryType);
             tempCardBody.append(tempTitle).append(tempDescription).append(tempTagBar).append(tempCardFooter);
-            tempDiv.addClass(tempClasses).append(tempImage).append(tempCardBody).append(tempReadTime);
+            tempDiv.addClass(tempClasses).append(tempImage).append(tempCardBody).append(tempRight).append(tempLeft);
             $('#cards-container').append(tempDiv);
 
 
