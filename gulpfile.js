@@ -51,6 +51,11 @@ function html(){
         .pipe(bs.stream())
 }
 
+function readme(){
+    return src('README.md')
+        .pipe(dest('build'))
+        .pipe(bs.stream())
+}
 
 function data() {
     return src('data/*')
@@ -83,7 +88,7 @@ function watchHome() {
 }
 
 const watch = gulp.parallel(watchHome, browserSyncHome);
-const build = gulp.series(gulp.parallel(css, html, js, data, res, imgs));
+const build = gulp.series(gulp.parallel(css, html, js, data, res, imgs, readme));
 
 
 const storyLocation = argv.story;
