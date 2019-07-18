@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>template</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59236300-6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-59236300-6');
+    </script>
+
+    <link rel="icon" href="res/imgs/favicon.ico" type="image/x-icon" />
+<script type="module" src="jsmain.js"></script>
+<link rel="stylesheet" href="cssmain.css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed|Literata" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/> -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- <script src="https://d3js.org/topojson.v1.min.js"></script> -->
+<script src="https://unpkg.com/deck.gl@7.0.9/dist/dist.dev.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!-- <script src="res/jquery.waypoints.min.js"></script> -->
+<!-- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script> -->
+<link rel="stylesheet" href="../../res/flexboxgrid.min.css">
+<script src="../../res/appear.min.js"></script>
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script> -->
+
+
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3&appId=300936        117042821&autoLogAppEvents=1"></script>
+    <div id="main">
+        <div id="navbar">
+            <div style="justify-content: center; display: flex; flex-direction: column"><a href="#"><img
+                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
+                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                <a class="nav-items" href="#footer">Contact</a>
+            </div>
+        </div>
+        <div id="section-0">
+            <p class='jumbo'>
+                POPULATION
+            </p>
+            <p class='descrip'>Chapter 1 : Geography, Age, Sex</p>
+            <p class="credits">Picture Credits : Randy Olson/National Geographic</p>
+        </div>
+        <div id="section-1" class="row">
+            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                <p class='text-para'>
+                    Being humans, curiosity is all but natural to us. We’re especially curious about people. People who
+                    look similar to us, people who look different than us, and people who wear funny hats. Those are the
+                    most intriguing. We gossip, we chant, we cheer and we praise. We’re constantly entering and exiting
+                    tribes, reevaluating allies and hierarchies. At some level, we consider India to be a tribe, which
+                    is why we function together (almost, tch). We increasingly rely on social media and the news to tell
+                    us what someone who’s thousands of kilometers away, yet belongs to our tribe, is thinking. This is
+                    vitally important to make sense of everything happening around us. The media (Whatsapp messages,
+                    Republic news, etc) can often be very misleading. Really, I understand your shock. Leaders with low
+                    approval ratings get elected, movies that unleash religious outrage go on to break box-office
+                    records (Ha!), movies that treat women like crap also go on to make a lot of money (Hmm, wut?),
+                    videos go viral, restaurants go broke and twitter is always angry. Who are these people? Who is an
+                    Indian? This is an effort to answer where and how we exist, as a population. The next time
+                    you see a report about “Middle Aged Indians wanting X”, or notice the 'national' media not reporting on floods in the North East, you know how many people they are, or aren't talking about. This is chapter one : Geography, Age and
+                    Sex.
+                </p>
+                <p class="text-subtitle">TL;DR [Highlights of this story]</p>
+                <ul>
+                    <li class="tldr">All Indians are equal. Some more equal than others.</li>
+                    <li class="tldr">Case of the missing brides.</li>
+                </ul>
+                <p class='text-title'>
+                    Introduction
+
+                </p>
+                <div id="d3-states-1"></div>
+                <p class='text-para'>
+                    India does have a lot of people. Around 1.33 Billion of them, actually, only second to China’s 1.38
+                    Billion. Nearly 1 in every 6 humans is Indian. This number has been increasing for a while now,
+                    nearly doubling over a 30 year period. While this looks like cause for concern, look at the blue
+                    dotted line. That’s the number of births per woman; it’s dropped from ~6 in 1960 to ~2.3 in 2018.
+                    The replacement rate for any population is said to be ~2.1 accounting for premature deaths. What
+                    this means is that, if the births per woman drops further to ~2-2.1, Indian population will
+                    stabilize. We’ll see shortly that many states in India have already hit the 2 mark and dropped even
+                    lower!
+
+                    <br><br>
+                    But clearly the population is not distributed uniformly across the country. It is useful to look at
+                    population, population density and fertility rate to get an idea of the population distribution, the
+                    packing and growth.
+                </p>
+
+            </div>
+
+            <img id="states-img" src='./res/states.jpg'>
+
+            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                <p class='text-para'>
+                    From first glance, it is clear that Uttar Pradesh, Bihar, West Bengal and Maharashtra have high
+                    populations. This alone, however, is insufficient information to conclude if it's a problem given
+                    how areas of different states vary (~3000 sq. KM of Goa to ~3,00,000 sq. KM of Rajasthan). So, a
+                    more insightful metric is population density which is led by Uttar Pradesh, Bihar, West Bengal and
+                    Kerala. But the most forward-looking metric is fertility rate. We already know that populations
+                    where this is ~2 stabilize, and grows exponentially when it is higher. Fun fact : Kerala has a very
+                    low fertility rate, and a high density. Guess away, what happened there.
+                </p>
+                <p class='text-title'>All Indians are equal. Some more equal than others.</p>
+                <div id="d3-states-1"></div>
+                <p class='text-para'>
+                    We do have to care about India as a whole, and world as a whole too, for good measure. But central
+                    planning has its limits. We entrust people to be able to solve their own problems. Also, slicing and
+                    dicing often yields better results in terms of identifying root causes and effective implementation
+                    of policies. So, there are 2 reasons to worry.
+                </p>
+                <div class="row">
+                    <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12">
+                        <p class='text-subtitle'>Monies</p>
+                        <p class='text-para'>
+                            The center divides revenue to states considering a bunch of complex parameters. Though this
+                            formula have been tweaked by the then Planning Commission and now Niti Aayog, the broad
+                            principles remain the same. There are a bunch of factors considered such as fiscal
+                            discipline, fiscal capacity, land area, ongoing crises, etc. But population remains a
+                            significant factor. States must receive money proportional to the people they govern. Here's
+                            the catch. The population considered for this is the population of 1971. The distribution
+                            then is remarkably different from the distribution now. States that have managed to bring
+                            about effective family planning have more money per citizen, with all other things accounted
+                            for.
+                        </p>
+                        <p class='text-subtitle'>Representation</p>
+                        <p class='text-para'>
+                            The guiding principle for dividing regions into Parliamentary Constituencies is to ensure an
+                            equal voice for each citizen in the parliament. However, the devil is in the details. Even
+                            though Lok Sabha constituencies' boundaries in a state are redrawn by the Boundary
+                            Delimitation Commission of India every decade based on the Indian census (2011 was the last
+                            one),this does not mean redistribution of seats among states. That was suspended in 1976
+                            following a constitutional amendment to incentivise the family planning programme. So
+                            effectively, a citizen in Uttar Pradesh has "less of a vote" than a citizen in Kerala.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12" style="display: flex;align-items: center;">
+                        <img class="col-md-12 col-lg-12 col-xs-12 col-xs-12" src='./res/multiplier.png'>
+
+                    </div>
+                </div>
+                <p class='text-para'>
+                    The path to fix this discrepancy, however, is riddled with difficult questions. Do we start from
+                    zero again? Wouldn't that punish states that spent heavily on family planning? Is maintaining
+                    'carrot and stick' more important than addressing actual suffering? How to solve world peace? :(
+                </p>
+            </div>
+            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" style="width:100%">
+                <p class='text-title'>Scaling Population Mountains</p>
+                <p class='text-para'>
+                        Pro Tip : Pinch for zoom, hold Shift and scroll for changing pitch, and yaw of the 3d map. And as usual, hover!
+                </p>
+
+                <div>
+                <div style="display:flex; justify-content: space-around;align-items: center">
+                    <div style="display:flex; justify-content: space-around;align-items: center;     width: 30%;">
+                            <div>
+                                    <p>Population</p>
+                                    <input type="radio" name="datatype" value="population" id='popu-radio' />
+                            </div>
+                            <div>
+                                    <p>Density</p>
+        
+                                    <input type="radio" name="datatype" value="density" id='den-radio' checked />
+                            </div>
+                    </div>
+                    <div>
+                            <p> 3Dify</p>
+
+                            <input type="checkbox" name="extrude" value="3Dify" checked id='threedify' />
+                            
+                    </div>
+                
+                </div>
+                    <div id="deck-map">
+                        <canvas id="deck-canvas"></canvas>
+                        <div id="tooltip" style="display: none; position: absolute; z-index: 1; pointer-events: none;">
+                        </div>
+                    </div>
+
+                    <p class='text-para'>
+                        This is the registered electors data of 2019 general elections, and is meant to be relative/indicative only. You can observe that population of most constituencies in a state are more or less equal, however the population of states varies widely. The density plot highlights urban clusters of India - Delhi (NCR), Mumbai-Pune, Bangalore, Hyderabad, Chennai and Kolkata. These regions are extremely densely populated and are administratively very different from their low-density counterparts. 
+                    </p>
+                    <p class='text-title'>If India was a 100 people</p>
+                    <p class='text-para'>
+                            Hopefully this drives the intuition home. I may visit you when you're asleep to ask this, you know. 👻
+                    </p>
+                    <div class="tooltip" id="tooltip2" style="opacity:0"></div>
+                    <div id="d3-map"></div>
+                    <p class='text-title'>Rural <i style="color:#16a085" class="fas fa-tractor"></i> Vs Urban <i style="color:#2980b9" class="fas fa-car-side"></i></p>
+
+                    <div id="d3-states-rurban"></div>
+
+                    <p class='text-title'>Case of the missing women</p>
+                    <!-- <div id="deck-map-2">
+                        <canvas id="deck-canvas-2"></canvas>
+                    </div> -->
+                </div>
+
+            </div>
+
+        </div>
+        <div id="section-2">
+            
+            <div id="d3-states"></div>
+
+
+
+        </div>
+
+        
+        
+
+    </div>
+</body>
+
+</html>

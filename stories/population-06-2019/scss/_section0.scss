@@ -1,0 +1,114 @@
+body{
+    font-family: 'Literata';
+    font-size: 16px;
+    color: #222;
+}
+
+svg{
+    margin: 20px;
+}
+
+#navbar{
+    width: 90%;
+    padding-left:5%;
+    padding-right:5%;
+    background: #fefefe;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    font-family: 'Josefin Sans';
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+
+.nav-items{
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #333 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    &:hover{
+        background: #333;
+        color: #fff !important;
+    }
+}
+
+#section-0{
+    // height: 100vh;
+    background-image: url("./res/popu.jpg"), linear-gradient(rgba(0,0,0,0.5),rgba(0, 0, 0, 0.7));
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    filter: saturate(200%) grayscale(100%) contrast(110%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.jumbo{
+    color: #eee;
+    font-size: 120px;
+    font-family: 'Josefin Sans';
+}
+.descrip{
+    color: #eee;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 10px;
+    font-weight: 900;
+}
+
+.credits{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 10px;
+    color: #fff;
+}
+
+.text-para{
+    text-align: justify;
+    margin: 15px 0px 15px 0px; 
+}
+
+.text-title{
+    margin-top: 60px;
+    text-align: left;
+    font-size: 40px;
+    font-family: 'Roboto Condensed';
+    // text-transform: lowercase;
+}
+
+.text-subtitle{
+    margin-top: 10px;
+    text-align: left;
+    font-size: 20px;
+    // font-weight: 800;
+    font-family: 'Roboto Condensed';
+    // letter-spacing: 3px;
+    // text-transform: lowercase;
+}
+.row{
+    // padding-top: 20px !important;
+}
+
+.plot-title{
+    font-size: 30px;
+}
+
+
+#states-img{
+    width: 80%;
+    background: #fff;
+}
+
+.tldr{
+    text-align: left;
+}

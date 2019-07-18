@@ -1,0 +1,71 @@
+$background-shade: #c0392b;
+$dark-shade: #333;
+$light-shade: #eee;
+$darkest: #122431;
+
+#section-1{
+    // background-color:$light-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px !important;
+}
+
+#deck-map, #deck-map-2{
+    height: 700px;
+    display: flex;
+    position: relative;
+    // width: 60%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+// #threedify{
+//     position: absolute;
+//     left: 10%;
+//     top: 10%;
+// }
+
+#tooltip{
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    pointer-events: none;
+}
+#tooltip2{
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.state-names-rurban{
+    font-size: 11px;
+}
+
+#d3-states{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.age-text{
+    font-size: 10px;
+}
+
+.tick>line{
+    color: #aaa;
+    stroke-dasharray: 5 3;
+    opacity: 0.5;
+}
