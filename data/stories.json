@@ -1,5 +1,16 @@
 [
     {
+        "title": "Population : Chapter 1",
+        "description": "Understanding Indians through geography, age and sex. [Unequal Indians, Missing Women, etc.]" ,
+        "link": "https://numbersofindia.github.io/stories/population-06-2019/",
+        "img": "./res/imgs/population_chapter1.png",
+        "tags": ["politics"],
+        "date": "July 2019",
+        "read_time": 15,
+        "story_type": "story",
+        "author": "Vivek Aithal"
+    },
+    {
         "title": "What it really takes to go Green",
         "description": "Data story in The Ken on India's energy policy and a peek at sustainable India." ,
         "link": "https://the-ken.com/story/india-green-energy-charts/",

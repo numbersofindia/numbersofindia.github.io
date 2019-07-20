@@ -15,7 +15,7 @@ function bubbleStates(id,w,h, data, eachRow,unit){
         .attr('y',function(d,i){
             return parseInt(i/eachRow) * eachHeight + 10;
         }).attr('text-anchor','middle')
-        .attr('class','state-names-density')
+        .attr('class','state-names-sratio')
         .text(function(d){
             return d.state.replace('-', ' ');
         })
@@ -32,15 +32,15 @@ function bubbleStates(id,w,h, data, eachRow,unit){
             // return Array.from(Array(Math.round(d.density/10))).map(function(k){return 0;});
             const numBalls = bubbleEdge*bubbleEdge;
             return Array.from(Array(numBalls)).map(function(k){return 0;});
-        }).enter().append('circle')
+        }).enter().append('circle').attr('class','balls-white')
         .attr('cx',function(p,q){
             return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(q%bubbleEdge) + 5;
         })
         .attr('cy',function(p,q){
-            return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
+            return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(110/bubbleEdge));
         })
-        .attr('r',2.5)
-        .attr('fill','#aaa')
+        .attr('r',0)
+        .attr('fill','#fff')
 
         gBalls.selectAll('.balls-filled').data(function(d){
             // console.log(Math.round(parseInt(d.population.split(',').join(''))*(1000-d.sexratio)/100000000));
@@ -48,15 +48,60 @@ function bubbleStates(id,w,h, data, eachRow,unit){
             var numBalls = Math.round(parseInt(d[unit].split(',').join(''))/10);
             return Array.from(Array(numBalls)).map(function(k){return 0;});
             // return Array.from(Array()).map(function(k){return 0;});
-        }).enter().append('circle')
+        }).enter().append('circle').attr('class','balls-filled')
         .attr('cx',function(p,q){
             return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(q%bubbleEdge) + 5;
         })
         .attr('cy',function(p,q){
-            return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
+            return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(110/bubbleEdge));
         })
-        .attr('r',2.5)
-        .attr('fill','#c0392b')
+        .attr('r',0)
+        .attr('fill','#f39c12')
+
+        appear({
+            init: function init(){
+              console.log('dom is ready');
+            },
+            elements: function elements(){
+              // work with all elements with the class "track"
+              return [document.getElementById('d3-states-sratio')];
+            //   return document.getElementsByClassName('d3-states-1');
+            },
+            appear: function appear(el){
+                console.log('sratioooo');
+                gBalls.selectAll('.balls-white').transition().delay(1000).duration(500).delay(function(p,q){
+                    return parseInt(q/10)*100;
+                })
+                .attr('cy',function(p,q){
+                    return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
+                }).attr('r',2.5)
+                
+                gBalls.selectAll('.balls-filled').transition().delay(1000).duration(500).delay(function(p,q){
+                    return parseInt(q/10)*100;
+                })
+                .attr('cy',function(p,q){
+                    return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
+                }).attr('r',2.5)
+               
+        
+    
+            },
+            disappear: function disappear(el){
+                gBalls.selectAll('.balls-white').transition().duration(500)
+                .attr('cy',function(p,q){
+                    return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(99/bubbleEdge));
+                }).attr('r',0)
+                
+                gBalls.selectAll('.balls-filled').transition().duration(500)
+                .attr('cy',function(p,q){
+                    return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(99/bubbleEdge));
+                }).attr('r',0)
+            },
+            bounds: -200,
+            reappear: true
+          });
+
+
 }
 
 function bubbleStatesVertical(id,w,h, data){
@@ -75,7 +120,7 @@ function bubbleStatesVertical(id,w,h, data){
         .attr('y',function(d,i){
             return (i%eachCol)*eachHeight+10;
         }).attr('text-anchor','end')
-        .attr('class','state-names-density')
+        .attr('class','state-names-missingwomen')
         .text(function(d){
             return d.state.replace('-', ' ');
         })
@@ -87,21 +132,67 @@ function bubbleStatesVertical(id,w,h, data){
             return 'translate('+(parseInt(i/eachCol) * eachWidth + 120)+'px,'+(parseInt(i%eachCol) * eachHeight + 5)+'px)';
         });
 
-        gBalls.selectAll('.balls-filled').data(function(d){
+        gBalls.selectAll('.balls-filled-missing').data(function(d){
             // console.log(Math.round(parseInt(d.population.split(',').join(''))*(1000-d.sexratio)/100000000));
-            var numBalls = Math.abs(Math.round(parseInt(d.population.split(',').join(''))*(1000-d.sexratio)/100000000));
+            var p = parseInt(d.population.split(',').join(''));
+            var sr = parseInt(d.sexratio);
+            var numBalls = Math.abs(Math.round(p*(1000-sr)/(1000+sr)/100000));
+            // console.log('defici',numBalls, d.sexratio);
             // var numBalls = Math.round(parseInt(d[unit].split(',').join(''))/10);
             return Array.from(Array(numBalls)).map(function(k){return 0;});
             // return Array.from(Array()).map(function(k){return 0;});
-        }).enter().append('circle')
+        }).enter().append('circle').attr('class', 'balls-filled-missing')
         .attr('cx',function(p,q){
-            return (q%bubbleEdge)*5;
+            return 0;
         })
         .attr('cy',function(p,q){
-            return parseInt(q/bubbleEdge)*5;
+            return 0;
         })
         .attr('r',2)
-        .attr('fill','#c0392b')
+        .attr('fill',function(d){
+            var sr = d3.select(this.parentNode).datum().sexratio;
+            if (sr > 1000) return '#1abc9c';
+            else return '#e74c3c'});
+
+
+
+            appear({
+                init: function init(){
+                  console.log('dom is ready');
+                },
+                elements: function elements(){
+                  // work with all elements with the class "track"
+                  return [document.getElementById('d3-states-missing')];
+                //   return document.getElementsByClassName('d3-states-1');
+                },
+                appear: function appear(el){
+                   
+                    gBalls.selectAll('.balls-filled-missing').transition().delay(1000).duration(1000).delay(function(p,q){
+                        return parseInt(q/10)*100;
+                    })
+                    .attr('cx',function(p,q){
+                        return (q%bubbleEdge)*5;
+                    })
+                    .attr('cy',function(p,q){
+                        return parseInt(q/bubbleEdge)*5;
+                    })
+                   
+            
+        
+                },
+                disappear: function disappear(el){
+                    gBalls.selectAll('.balls-filled-missing').transition().duration(500)
+                    .attr('cx',function(p,q){
+                        return 0;
+                    })
+                    .attr('cy',function(p,q){
+                        return 0;
+                    })
+                    
+                },
+                bounds: -200,
+                reappear: true
+              });
 }
 
 function eitherSide(id,w,h,data, leftIcon, rightIcon){
@@ -122,7 +213,9 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
 
     const iconScale = 0.03;
     const iconScale2 = 0.035;
-    const eachHeight = h/data.length + 2;
+    const eachHeight = h/data.filter(function(k){
+        return k['s/u']==='s'
+    }).length;
     const radius = 5;
     
     var importedNodeLeft = document.importNode(leftIcon.documentElement, true);
@@ -307,12 +400,12 @@ function areaStates(id,w,h, data, eachRow,unit){
             return k['s/u']==='s'
         })).enter().append('text')
         .attr('x',function(d,i){
-            return i%eachRow * eachWidth + eachWidth/2;
+            return i%eachRow * eachWidth + eachWidth/1.7;
         })
         .attr('y',function(d,i){
             return parseInt(i/eachRow) * eachHeight + 10;
         }).attr('text-anchor','middle')
-        .attr('class','state-names-density')
+        .attr('class','state-names-age')
         .text(function(d){
             return d.state.replace('-', ' ');
         })
@@ -363,17 +456,20 @@ function areaStates(id,w,h, data, eachRow,unit){
             return [d.age_male_urban.split(',')];
         }).enter().append('path').attr('d',areaDown).attr('opacity',0.5).attr('fill','#2980b9');
 
-        gBalls.append('circle').attr('cx',scaleX(5)).attr('cy',scaleYUp(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',2);
-        gBalls.append('circle').attr('cx',scaleX(7.1)).attr('cy',scaleYUp(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',2);
-        gBalls.append('circle').attr('cx',scaleX(5)).attr('cy',scaleYDown(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',2);
-        gBalls.append('circle').attr('cx',scaleX(7.1)).attr('cy',scaleYDown(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',2);
+        gBalls.append('circle').attr('cx',scaleX(5)).attr('cy',scaleYUp(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',1);
+        gBalls.append('circle').attr('cx',scaleX(7.1)).attr('cy',scaleYUp(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',1);
+        gBalls.append('circle').attr('cx',scaleX(5)).attr('cy',scaleYDown(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',1);
+        gBalls.append('circle').attr('cx',scaleX(7.1)).attr('cy',scaleYDown(20)).attr('r',8).attr('fill','none').attr('stroke','#eee').attr('stroke-width',1);
 
         gBalls.append('text').attr('x',scaleX(5)).attr('y',scaleYUp(17)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#c0392b').text(function(d){return Math.round(d.avg_female_rural)});
         gBalls.append('text').attr('x',scaleX(7.1)).attr('y',scaleYUp(17)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#f39c12').text(function(d){return Math.round(d.avg_female_urban)});
         gBalls.append('text').attr('x',scaleX(5)).attr('y',scaleYDown(23)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#27ae60').text(function(d){return Math.round(d.avg_male_rural)});
         gBalls.append('text').attr('x',scaleX(7.1)).attr('y',scaleYDown(23)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#2980b9').text(function(d){return Math.round(d.avg_male_urban)});
 
-
+        svg.append('text').attr('x',600).attr('y',335).attr('text-anchor','middle').attr('class','age-text').attr('fill','#c0392b').text("Avg. Age Rural Female");
+        svg.append('text').attr('x',725).attr('y',335).attr('text-anchor','middle').attr('class','age-text').attr('fill','#f39c12').text("Avg. Age Urban Female");
+        svg.append('text').attr('x',600).attr('y',365).attr('text-anchor','middle').attr('class','age-text').attr('fill','#27ae60').text("Avg. Age Rural Male");
+        svg.append('text').attr('x',725).attr('y',365).attr('text-anchor','middle').attr('class','age-text').attr('fill','#2980b9').text("Avg. Age Urban Male");
         
        
 }
@@ -480,9 +576,9 @@ function section3(){
         var businesswoman = data[2];
         data = data[0];
         const eachRow = 8;
-        bubbleStates('#d3-states',800,400, data, eachRow,'sexratio');
-        bubbleStatesVertical('#d3-states',700,400, data);
-        eitherSide('#d3-states-rurban',700,850,data, farmer, businesswoman);
+        bubbleStates('#d3-states-sratio',800,400, data, eachRow,'sexratio');
+        bubbleStatesVertical('#d3-states-missing',700,400, data);
+        eitherSide('#d3-states-rurban',700,600,data, farmer, businesswoman);
         areaStates('#d3-states',800,400, data, eachRow,'sexratio');
         linePlots('#d3-states-1',800,400);
         

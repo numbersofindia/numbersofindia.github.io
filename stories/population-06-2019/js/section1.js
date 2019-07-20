@@ -114,6 +114,30 @@
     
 // ];
 
+function haversineDistance(coords1, coords2) {
+    function toRad(x) {
+      return x * Math.PI / 180;
+    }
+  
+    var lon1 = coords1[0];
+    var lat1 = coords1[1];
+  
+    var lon2 = coords2[0];
+    var lat2 = coords2[1];
+  
+    var R = 6371; // km
+  
+    var x1 = lat2 - lat1;
+    var dLat = toRad(x1);
+    var x2 = lon2 - lon1;
+    var dLon = toRad(x2)
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
+      Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c;
+    return d;
+}
 
 function section1() {
     const INDIA_GEOJSON = 'res/india.geojson'; //eslint-disable-line
@@ -136,7 +160,33 @@ function section1() {
         ]
     });
 
-    function redraw(extrude, datatype){
+    function redraw(extrude, datatype, states){
+        function setTooltip(object, x, y) {
+            // console.log(object,x,y);
+            const el = document.getElementById('tooltip');
+            if (object) {
+            el.innerHTML = '<p><span style="font-weight:800; letter-spacing: 3px; text-transform: uppercase">'+object.properties.st_name.toLocaleString() +'</span><br>'+object.properties.pc_name.toLocaleString() + ' : ' + object.properties.electors_2019.toLocaleString()+'</p>';
+            el.style.display = 'block';
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            } else {
+            el.style.display = 'none';
+            }
+        }
+        function setTooltip2(object, x, y) {
+            // console.log(object,x,y);
+            const el = document.getElementById('tooltip');
+            if (object) {
+            var state = states.filter(k=>{return object.properties.st_name.replace(' & ','-').replace(' ','-')===k.state});
+            
+            el.innerHTML = '<p><span style="font-weight:800; letter-spacing: 3px; text-transform: uppercase">'+object.properties.st_name.toLocaleString() +'</span><br>'+object.properties.pc_name.toLocaleString() + ' : ' + haversineDistance(object.properties.centroid,[state[0].lng, state[0].lat]).toFixed(0) +' KMs</p>';
+            el.style.display = 'block';
+            el.style.left = x + 'px';
+            el.style.top = y + 'px';
+            } else {
+            el.style.display = 'none';
+            }
+        }
         var layers =[];
         if (datatype==='POPULATION') {
             layers = [
@@ -227,6 +277,68 @@ function section1() {
                 
             ]
         
+        }
+        else if (datatype==='CAPITALS') {
+            layers = [
+                new GeoJsonLayer({
+                    id: 'geo-layer',
+                    data: INDIA_GEOJSON,
+                    stroked: true,
+                    filled: true,
+                    extruded: false,
+                    opacity: 1,
+                    wireframe: true,
+                    getLineColor: [220,220,220, 50],
+                    stroked: true,
+                    pickable: true,
+                    getLineWidth: 1000,
+                    getFillColor: d=>{
+                        var state = states.filter(k=>{return d.properties.st_name.replace(' & ','-').replace(' ','-')===k.state});
+                        // var blues = d3.scaleOrdinal(d3.schemeBlues[10]);
+                        // console.log(blues);
+                        var col = 50+state[0].rank*4;
+                        return [col,col,col,255];
+                    },
+                    onHover: ({object, x, y}) => {
+                        // console.log(object, x,y);
+                        setTooltip2(object, x, y);
+                    },           
+                }),
+                new ArcLayer({
+                    id: 'arc-layer',
+                    data: INDIA_GEOJSON,
+                    opacity: 0.5,
+                    dataTransform:  d=>d.features.filter(f => f.properties.electors_2019 > 0),
+                    getSourcePosition: f=>f.properties.centroid,
+                    // getSourcePosition: d => d.properties.centroid,
+                    getTargetPosition: f=>{
+                        // console.log('ff',f.properties.st_name.replace(' & ','-').replace(' ','-'));
+                        var state = states.filter(k=>{return f.properties.st_name.replace(' & ','-').replace(' ','-')===k.state});
+                        return [state[0].lng, state[0].lat];
+                    },
+                    getSourceColor: f =>{
+                        var state = states.filter(k=>{return f.properties.st_name.replace(' & ','-').replace(' ','-')===k.state});
+                        var te = haversineDistance(f.properties.centroid,[state[0].lng, state[0].lat]);
+                        if(te<50)return [1, 152, 189,255];
+                        else if(te<150)return [73,227,206,255];
+                        else if(te<250)return [216, 254, 181,255];
+                        else if(te<350)return [254, 237, 177,255];
+                        else if(te<450)return [254, 173, 84,255];
+                        else return [209, 55, 78,255];
+                    },
+                    getTargetColor: f =>{
+                        var state = states.filter(k=>{return f.properties.st_name.replace(' & ','-').replace(' ','-')===k.state});
+                        var te = haversineDistance(f.properties.centroid,[state[0].lng, state[0].lat]);
+                        if(te<100)return [1, 152, 189,255];
+                        else if(te<200)return [73,227,206,255];
+                        else if(te<300)return [216, 254, 181,255];
+                        else if(te<400)return [254, 237, 177,255];
+                        else if(te<500)return [254, 173, 84,255];
+                        else return [209, 55, 78,255];
+                    },
+                    getWidth: 3
+                  })   
+            ]
         }
             
         deck.setProps({layers});
@@ -338,71 +450,68 @@ function section1() {
     }
     
 
-    redraw(true,'DENSITY');
     Promise.all([d3.csv('./res/states.csv')]).then(function(data) {    
         // arcMap('deck-canvas-2', data[0])
+        var states = data[0];
+        redraw(true,'DENSITY', states);
+        var datatype = 'DENSITY';
+
+        $('#threedify').click(function(){
+            redraw($('#threedify')[0].checked, datatype, states);
+        })
+        $('#den-radio').click(function(){
+            console.log('den radio clicked');
+            datatype = 'DENSITY';
+            redraw(!($('#threedify')[0].checked), datatype, states);
+            redraw($('#threedify')[0].checked, datatype, states);
+        })
+
+        $('#popu-radio').click(function(){
+
+            console.log('popu radio clicked');
+            datatype = 'POPULATION';
+
+            redraw(!($('#threedify')[0].checked), datatype, states);
+            redraw($('#threedify')[0].checked, datatype, states);
+        })
+
+        $('#cap-radio').click(function(){
+
+            console.log('popu radio clicked');
+            datatype = 'CAPITALS';
+
+            redraw($('#threedify')[0].checked, datatype, states);
+        })
+
+
+        appear({
+            init: function init(){
+            console.log('dom is ready');
+            },
+            elements: function elements(){
+            // work with all elements with the class "track"
+            return [document.getElementById('deck-map')];
+            //   return document.getElementsByClassName('d3-states-1');
+            },
+            appear: function appear(el){
+                // d3.select('#line1').transition().delay(200).duration(500).attr("d", line1);
+                // d3.select('#line2').transition().delay(200).duration(500).attr("d", line2);
+                redraw($('#threedify')[0].checked, datatype, states);
+
+            },
+            disappear: function disappear(el){
+
+                // d3.select('#line1').transition().duration(1000).attr("d", line1_before);
+                // d3.select('#line2').transition().duration(1000).attr("d", line1_before);
+                redraw(!($('#threedify')[0].checked), datatype, states);
+            },
+            bounds: 200,
+            reappear: true
+        });
+
     });
 
-    var datatype = 'DENSITY';
+    
 
-    $('#threedify').click(function(){
-        redraw($('#threedify')[0].checked, datatype);
-    })
-    $('#den-radio').click(function(){
-        console.log('den radio clicked');
-        datatype = 'DENSITY';
-        redraw(!($('#threedify')[0].checked), datatype);
-        redraw($('#threedify')[0].checked, datatype);
-    })
-
-    $('#popu-radio').click(function(){
-
-        console.log('popu radio clicked');
-        datatype = 'POPULATION';
-
-        redraw(!($('#threedify')[0].checked), datatype);
-        redraw($('#threedify')[0].checked, datatype);
-    })
-
-
-    appear({
-        init: function init(){
-          console.log('dom is ready');
-        },
-        elements: function elements(){
-          // work with all elements with the class "track"
-          return [document.getElementById('deck-map')];
-        //   return document.getElementsByClassName('d3-states-1');
-        },
-        appear: function appear(el){
-            // d3.select('#line1').transition().delay(200).duration(500).attr("d", line1);
-            // d3.select('#line2').transition().delay(200).duration(500).attr("d", line2);
-            redraw($('#threedify')[0].checked, datatype);
-
-        },
-        disappear: function disappear(el){
-
-            // d3.select('#line1').transition().duration(1000).attr("d", line1_before);
-            // d3.select('#line2').transition().duration(1000).attr("d", line1_before);
-            redraw(!($('#threedify')[0].checked), datatype);
-        },
-        bounds: 200,
-        reappear: true
-      });
-
-    function setTooltip(object, x, y) {
-        // console.log(object,x,y);
-        const el = document.getElementById('tooltip');
-        if (object) {
-          el.innerHTML = '<p><span style="font-weight:800; letter-spacing: 3px; text-transform: uppercase">'+object.properties.st_name.toLocaleString() +'</span><br>'+object.properties.pc_name.toLocaleString() + ' : ' + object.properties.electors_2019.toLocaleString()+'</p>';
-          el.style.display = 'block';
-          el.style.left = x + 'px';
-          el.style.top = y + 'px';
-        } else {
-          el.style.display = 'none';
-        }
-    }
-
-
-    console.log(deck);
+    // console.log(deck);
 }

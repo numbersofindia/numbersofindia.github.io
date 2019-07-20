@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>template</title>
+    <title>Population : Chapter 1</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@
     {% include "fb.html" %}
     <div id="main">
         <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="#"><img
+            <div style="justify-content: center; display: flex; flex-direction: column"><a href="/"><img
                         src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
             <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
                 <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
@@ -33,172 +33,304 @@
                 POPULATION
             </p>
             <p class='descrip'>Chapter 1 : Geography, Age, Sex</p>
+            <div id='load-icon'>
+                <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+
             <p class="credits">Picture Credits : Randy Olson/National Geographic</p>
         </div>
-        <div id="section-1" class="row">
-            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
-                <p class='text-para'>
-                    Being humans, curiosity is all but natural to us. We’re especially curious about people. People who
-                    look similar to us, people who look different than us, and people who wear funny hats. Those are the
-                    most intriguing. We gossip, we chant, we cheer and we praise. We’re constantly entering and exiting
-                    tribes, reevaluating allies and hierarchies. At some level, we consider India to be a tribe, which
-                    is why we function together (almost, tch). We increasingly rely on social media and the news to tell
-                    us what someone who’s thousands of kilometers away, yet belongs to our tribe, is thinking. This is
-                    vitally important to make sense of everything happening around us. The media (Whatsapp messages,
-                    Republic news, etc) can often be very misleading. Really, I understand your shock. Leaders with low
-                    approval ratings get elected, movies that unleash religious outrage go on to break box-office
-                    records (Ha!), movies that treat women like crap also go on to make a lot of money (Hmm, wut?),
-                    videos go viral, restaurants go broke and twitter is always angry. Who are these people? Who is an
-                    Indian? This is an effort to answer where and how we exist, as a population. The next time
-                    you see a report about “Middle Aged Indians wanting X”, or notice the 'national' media not reporting on floods in the North East, you know how many people they are, or aren't talking about. This is chapter one : Geography, Age and
-                    Sex.
-                </p>
-                <p class="text-subtitle">TL;DR [Highlights of this story]</p>
-                <ul>
-                    <li class="tldr">All Indians are equal. Some more equal than others.</li>
-                    <li class="tldr">Case of the missing brides.</li>
-                </ul>
-                <p class='text-title'>
-                    Introduction
+        <div id="main-content" style="display:none;">
+            <div id="section-1" class="row">
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                    <p class='text-para'>
+                        Being humans, curiosity is all but natural to us. We’re especially curious about people. People
+                        who
+                        look similar to us, people who look different than us, and people who wear funny hats. Those are
+                        the
+                        most intriguing. We gossip, we chant, we cheer and we praise. We’re constantly entering and
+                        exiting
+                        tribes, reevaluating allies and hierarchies. At some level, we consider India to be a tribe,
+                        which
+                        is why we function together (almost, tch). We increasingly rely on social media and the news to
+                        tell
+                        us what someone who’s thousands of kilometers away, yet belongs to our tribe, is thinking. This
+                        is
+                        vitally important to make sense of everything happening around us. The media (Whatsapp messages,
+                        Republic news, etc) can often be very misleading. Really, I understand your shock. Leaders with
+                        low
+                        approval ratings get elected, movies that unleash religious outrage go on to break box-office
+                        records (Ha!), movies that treat women like crap also go on to make a lot of money (Hmm, wut?),
+                        videos go viral, restaurants go broke and twitter is always angry. Who are these people? Who is
+                        an
+                        Indian? This is an effort to answer where and how we exist, as a population. The next time
+                        you see a report about “Middle Aged Indians wanting X”, or notice the 'national' media not
+                        reporting
+                        on floods in the North East, you know how many people they are, or aren't talking about. This is
+                        chapter one : Geography, Age and
+                        Sex.
+                    </p>
+                    <p class="text-subtitle">TL;DR [Highlights of this story]</p>
+                    <ul>
+                        <li class="tldr"><a href='#ckpt1'>All Indians are equal. Some more equal than others.</a></li>
+                        <li class="tldr"><a href='#ckpt2'>Case of the missing women.</a></li>
+                        <li class="tldr"><a href='#ckpt3'>Scaling population mountains.</a></li>
+                        <li class="tldr"><a href='#ckpt4'>Age is just a number. Sigh.</a></li>
+                        <li class="tldr"><a href='#ckpt5'>If India was 100 people.</a></li>
 
-                </p>
-                <div id="d3-states-1"></div>
-                <p class='text-para'>
-                    India does have a lot of people. Around 1.33 Billion of them, actually, only second to China’s 1.38
-                    Billion. Nearly 1 in every 6 humans is Indian. This number has been increasing for a while now,
-                    nearly doubling over a 30 year period. While this looks like cause for concern, look at the blue
-                    dotted line. That’s the number of births per woman; it’s dropped from ~6 in 1960 to ~2.3 in 2018.
-                    The replacement rate for any population is said to be ~2.1 accounting for premature deaths. What
-                    this means is that, if the births per woman drops further to ~2-2.1, Indian population will
-                    stabilize. We’ll see shortly that many states in India have already hit the 2 mark and dropped even
-                    lower!
+                    </ul>
+                    <p class='text-title'>
+                        Introduction
 
-                    <br><br>
-                    But clearly the population is not distributed uniformly across the country. It is useful to look at
-                    population, population density and fertility rate to get an idea of the population distribution, the
-                    packing and growth.
-                </p>
+                    </p>
+                    <div id="d3-states-1"></div>
+                    <p class='text-para'>
+                        India does have a lot of people. Around 1.33 Billion of them, actually, only second to China’s
+                        1.38
+                        Billion. Nearly 1 in every 6 humans is Indian. This number has been increasing for a while now,
+                        nearly doubling over a 30 year period. While this looks like cause for concern, look at the blue
+                        dotted line. That’s the number of births per woman; it’s dropped from ~6 in 1960 to ~2.3 in
+                        2018.
+                        The replacement rate for any population is said to be ~2.1 accounting for premature deaths. What
+                        this means is that, if the births per woman drops further to ~2-2.1, Indian population will
+                        stabilize. We’ll see shortly that many states in India have already hit the 2 mark and dropped
+                        even
+                        lower!
 
-            </div>
+                        <br><br>
+                        But clearly the population is not distributed uniformly across the country. It is useful to look
+                        at
+                        population, population density and fertility rate to get an idea of the population distribution,
+                        the
+                        packing and growth.
+                    </p>
 
-            <img id="states-img" src='./res/states.jpg'>
-
-            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
-                <p class='text-para'>
-                    From first glance, it is clear that Uttar Pradesh, Bihar, West Bengal and Maharashtra have high
-                    populations. This alone, however, is insufficient information to conclude if it's a problem given
-                    how areas of different states vary (~3000 sq. KM of Goa to ~3,00,000 sq. KM of Rajasthan). So, a
-                    more insightful metric is population density which is led by Uttar Pradesh, Bihar, West Bengal and
-                    Kerala. But the most forward-looking metric is fertility rate. We already know that populations
-                    where this is ~2 stabilize, and grows exponentially when it is higher. Fun fact : Kerala has a very
-                    low fertility rate, and a high density. Guess away, what happened there.
-                </p>
-                <p class='text-title'>All Indians are equal. Some more equal than others.</p>
-                <div id="d3-states-1"></div>
-                <p class='text-para'>
-                    We do have to care about India as a whole, and world as a whole too, for good measure. But central
-                    planning has its limits. We entrust people to be able to solve their own problems. Also, slicing and
-                    dicing often yields better results in terms of identifying root causes and effective implementation
-                    of policies. So, there are 2 reasons to worry.
-                </p>
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12">
-                        <p class='text-subtitle'>Monies</p>
-                        <p class='text-para'>
-                            The center divides revenue to states considering a bunch of complex parameters. Though this
-                            formula have been tweaked by the then Planning Commission and now Niti Aayog, the broad
-                            principles remain the same. There are a bunch of factors considered such as fiscal
-                            discipline, fiscal capacity, land area, ongoing crises, etc. But population remains a
-                            significant factor. States must receive money proportional to the people they govern. Here's
-                            the catch. The population considered for this is the population of 1971. The distribution
-                            then is remarkably different from the distribution now. States that have managed to bring
-                            about effective family planning have more money per citizen, with all other things accounted
-                            for.
-                        </p>
-                        <p class='text-subtitle'>Representation</p>
-                        <p class='text-para'>
-                            The guiding principle for dividing regions into Parliamentary Constituencies is to ensure an
-                            equal voice for each citizen in the parliament. However, the devil is in the details. Even
-                            though Lok Sabha constituencies' boundaries in a state are redrawn by the Boundary
-                            Delimitation Commission of India every decade based on the Indian census (2011 was the last
-                            one),this does not mean redistribution of seats among states. That was suspended in 1976
-                            following a constitutional amendment to incentivise the family planning programme. So
-                            effectively, a citizen in Uttar Pradesh has "less of a vote" than a citizen in Kerala.
-                        </p>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12" style="display: flex;align-items: center;">
-                        <img class="col-md-12 col-lg-12 col-xs-12 col-xs-12" src='./res/multiplier.png'>
-
-                    </div>
                 </div>
-                <p class='text-para'>
-                    The path to fix this discrepancy, however, is riddled with difficult questions. Do we start from
-                    zero again? Wouldn't that punish states that spent heavily on family planning? Is maintaining
-                    'carrot and stick' more important than addressing actual suffering? How to solve world peace? :(
-                </p>
-            </div>
-            <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" style="width:100%">
-                <p class='text-title'>Scaling Population Mountains</p>
-                <p class='text-para'>
-                        Pro Tip : Pinch for zoom, hold Shift and scroll for changing pitch, and yaw of the 3d map. And as usual, hover!
-                </p>
 
-                <div>
-                <div style="display:flex; justify-content: space-around;align-items: center">
-                    <div style="display:flex; justify-content: space-around;align-items: center;     width: 30%;">
-                            <div>
-                                    <p>Population</p>
-                                    <input type="radio" name="datatype" value="population" id='popu-radio' />
-                            </div>
-                            <div>
-                                    <p>Density</p>
-        
-                                    <input type="radio" name="datatype" value="density" id='den-radio' checked />
-                            </div>
-                    </div>
-                    <div>
-                            <p> 3Dify</p>
+                <img id="states-img" src='./res/states.jpg'>
 
-                            <input type="checkbox" name="extrude" value="3Dify" checked id='threedify' />
-                            
-                    </div>
-                
-                </div>
-                    <div id="deck-map">
-                        <canvas id="deck-canvas"></canvas>
-                        <div id="tooltip" style="display: none; position: absolute; z-index: 1; pointer-events: none;">
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+                    <p class='text-para'>
+                        From first glance, it is clear that Uttar Pradesh, Bihar, West Bengal and Maharashtra have high
+                        populations. This alone, however, is insufficient information to conclude if it's a problem
+                        given
+                        how areas of different states vary (~3000 sq. KM of Goa to ~3,00,000 sq. KM of Rajasthan). So, a
+                        more insightful metric is population density which is led by Uttar Pradesh, Bihar, West Bengal
+                        and
+                        Kerala. But the most forward-looking metric is fertility rate. We already know that populations
+                        where this is ~2 stabilize, and grows exponentially when it is higher. Fun fact : Kerala has a
+                        very
+                        low fertility rate, and a high density. Guess away, what happened there.
+                    </p>
+                    <p class='text-title' id='ckpt1'>All Indians are equal. Some more equal than others.</p>
+                    <div id="d3-states-1"></div>
+                    <p class='text-para'>
+                        We do have to care about India as a whole, and world as a whole too, for good measure. But
+                        central
+                        planning has its limits. We entrust people to be able to solve their own problems. Also, slicing
+                        and
+                        dicing often yields better results in terms of identifying root causes and effective
+                        implementation
+                        of policies. What would you say if I told you that a citizen in one state has a grossly different "voting value" and effective government spending? That would be crazy, right? Yep. It would also be true.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12">
+                            <p class='text-subtitle'>Monies</p>
+                            <p class='text-para'>
+                                The center divides revenue to states considering a bunch of complex parameters such as fiscal
+                                discipline, fiscal capacity, land area, ongoing crises, etc. Though
+                                this
+                                formula has been tweaked by the then Planning Commission and now Niti Aayog, repeatedly, the broad
+                                principles remain the same. Population remains a
+                                significant factor in determining revenue share. States must receive money proportional to the number of people they govern.
+                                Here's
+                                the catch. The population considered for this is the population of 1971. The
+                                distribution
+                                then was remarkably different from the distribution now. Uttar Pradesh has grown by ~2.5x where as Kerala has grown by ~1.6x. So, states that have managed to
+                                bring
+                                about effective family planning have more money to spend per citizen, with all other things
+                                accounted
+                                for.
+                            </p>
+                            <p class='text-subtitle'>Representation</p>
+                            <p class='text-para'>
+                                The guiding principle for dividing regions into Parliamentary Constituencies is to
+                                ensure an
+                                equal voice for each citizen in the parliament. Each State is given a fixed number of seats. The Lok Sabha constituencies' boundaries in each state are redrawn by the Boundary
+                                Delimitation Commission of India every decade based on the Indian census, to ensure that there are more or less equal number of people per constituency. However, reevaluating the number of seats per state was suspended in 1976
+                                following a constitutional amendment to incentivise the family planning programme. So given widely varied growth rates,  
+                                a citizen in Bihar has "less of a vote" than a citizen in Orissa.
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xs-12 col-xs-12" style="display: flex;align-items: center;">
+                            <img class="col-md-12 col-lg-12 col-xs-12 col-xs-12" src='./res/multiplier.png'>
+
                         </div>
                     </div>
-
                     <p class='text-para'>
-                        This is the registered electors data of 2019 general elections, and is meant to be relative/indicative only. You can observe that population of most constituencies in a state are more or less equal, however the population of states varies widely. The density plot highlights urban clusters of India - Delhi (NCR), Mumbai-Pune, Bangalore, Hyderabad, Chennai and Kolkata. These regions are extremely densely populated and are administratively very different from their low-density counterparts. 
+                        The path to fix this discrepancy, however, is riddled with difficult questions. Do we start from
+                        zero again? Wouldn't that punish states that spent heavily on family planning, and reward states that didn't the mission seriously enough? Is maintaining
+                        'carrot and stick' mechanism more important than addressing actual suffering in poorer states? How to solve world peace? :(
                     </p>
-                    <p class='text-title'>If India was a 100 people</p>
+                </div>
+            </div>
+            <div id="section-2" class="row">
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+
+                    <p class='text-title white-text' id='ckpt2'>Case of the Missing Women</p>
+                    <div id="d3-states-sratio" class="white-text"></div>
+                    <p class='text-para white-text'>
+                        We all remember reading about the evils of female foeticide and infanticide in our school social
+                        studies text books. What happened to that? Have we solved that issue and is there an way to
+                        quantify the harm? The first number that jumps at us is the sex ratio of a country. India has
+                        ~8% more males than females with a sexratio of 926 females for every 1000 males. Given probability at
+                        birth is nearly 50%, we expect the sexratio to be 1 female per male. Sexratio of Indian States
+                        varies between 879 of Haryana and 1084 of Kerala. The visualization above indicates number of women per 100 men, in each state. Apart from a few states, most have sexratios
+                        above 900. Yay, we've hit 90%! Woohoo. Isn't this good? Unfortunately not. <br><br>
+
+                        When we look at percentages, we often forget that the actual number of people is millions multiplied by that percentage. A more intuitive number is to calculate additional males,
+                        overall. Each circle below represents 100k "extra males".
+                    </p>
+                    <div id="d3-states-missing" class="white-text"></div>
+                    <p class='text-para white-text'>
+                        We currently have around 35 Mil 'extra men'. This number is staggering. India is a country where
+                        marriage is an obvious way of life (I'm discounting LGBTQ marriages in the event they become
+                        legal, as it most likely won't have much of an effect on the proportions, although it'll bring down absolute numbers). By Indian
+                        culture standards, growing a family is an essential piece of an individual's life. This crisis is already
+                        playing out in several parts of China. <a
+                            href='https://www.ft.com/content/d44122c0-a435-11e5-873f-68411a84f346'>Chinese men actively
+                            seek out partners from other countries, often saving up large sums of money for this
+                            singular purpose.</a> <br><br>Also interestingly, studies show that the proportion of marriageable
+                        women does not remain constant, even if sex-ratio is constant. Older men save up and end up marrying younger women eroding the next
+                        generation's pool of women. So, the deficit keeps growing far into the future. There is active research into the societal implications of millions of 'barren' men in a population. Though
+                        the findings are not universally accepted, there is evidence to believe that there will be
+                        perceptible increase in crime and violence. Imagine millions of men, with barely enough jobs and
+                        no conceivable prospect of marriage or family, the one thing they know to be central to the Indian way of life. I hope you look slightly
+                        worried. Kerala to the rescue ❤️? <br><br>
+                    </p>
+                </div>
+
+            </div>
+            <div id='section-3' class='row'>
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12" style="width:100%">
+                    <p class='text-title' id='ckpt3'>Scaling Population Mountains</p>
                     <p class='text-para'>
-                            Hopefully this drives the intuition home. I may visit you when you're asleep to ask this, you know. 👻
+                        Pro Tip : Pinch for zoom, hold Shift and scroll for changing pitch, and yaw of the 3d map. And
+                        as
+                        usual, hover!
+                    </p>
+
+                    <div>
+                        <div style="display:flex; justify-content: space-around;align-items: center">
+                            <div
+                                style="display:flex; justify-content: space-around;align-items: center;     width: 70%;    border-right: 2px solid #333;">
+                                <div>
+                                    <p>Population</p>
+                                    <input type="radio" name="datatype" value="population" id='popu-radio' />
+                                </div>
+                                <div>
+                                    <p>Density</p>
+
+                                    <input type="radio" name="datatype" value="density" id='den-radio' checked />
+                                </div>
+                                <div>
+                                    <p>Distance from State Capitals</p>
+
+                                    <input type="radio" name="datatype" value="density" id='cap-radio' />
+                                </div>
+                            </div>
+                            <div>
+                                <p> 3Dify</p>
+
+                                <input type="checkbox" name="extrude" value="3Dify" checked id='threedify' />
+
+                            </div>
+
+                        </div>
+                        <div id="deck-map">
+                            <canvas id="deck-canvas"></canvas>
+                            <div id="tooltip"
+                                style="display: none; position: absolute; z-index: 1; pointer-events: none;">
+                            </div>
+                        </div>
+
+                        <p class='text-para'>
+                            This is the registered electors data of 2019 general elections, and is meant to be
+                            relative/indicative only. You can observe that population of most constituencies in a state
+                            are
+                            more or less equal, however the population of states themselves, vary widely. The density plot
+                            highlights
+                            urban clusters of India - Delhi (NCR), Mumbai-Pune, Bangalore, Hyderabad, Chennai and
+                            Kolkata.
+                            These regions are very densely populated and are administratively very different from
+                            their
+                            low-density counterparts. The distance-from-state-capital didn;tt turn out to be particularly insightful. But looks pretty nonetheless :) 
+                        </p>
+                        <p class='text-title'>Rural <i style="color:#16a085" class="fas fa-tractor"></i> Vs Urban <i
+                                style="color:#2980b9" class="fas fa-car-side"></i></p>
+                        <p class='text-para'>
+                            One interesting indicator of development is the percentage of population in urban regions vs
+                            rural regions. In urban regions, economies of scale begin aiding service-distribution. Urban
+                            areas are also the hubs of trade, manufacturing and are bustling with economic activity. We
+                            observe that north-west and south-west states have a higher proportion of urban population
+                            compared with the rest of the nation. The total national urban population is around
+                            ~30%, compared to nearly 59% in China. This is vital in addressing India's unemployment and
+                            quality primary education woes.
+                        </p>    
+                        <div id="d3-states-rurban"></div>
+
+                        <!-- <div id="deck-map-2">
+                                <canvas id="deck-canvas-2"></canvas>
+                            </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+            <div id='section-4' class='row'>
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+
+                    <p class='text-title white-text' id='ckpt4'>Age is just a number. Sigh. </p>
+                    <div id="d3-states" class="white-text"></div>
+                    <p class='text-para white-text'>
+                        The average Indian is 27 years old (median is around 25). Ah, to be young and foolish. That must
+                        be it, right? The above plot is the distribution of age for rural and urban, male and female
+                        populations. Notice that states with high fertility rates have a nearly exponentially decreasing
+                        curve, whereas the others have a more plateaued region before the drop.
+                    </p>
+                </div>
+            </div>
+            <div id='section-5' class='row'>
+                <div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
+
+                    <p class='text-title' id='ckpt5'>If India was a 100 people</p>
+                    <p class='text-para'>
+                        For the final plot, I wanted to drive home the intuition of population percentages w.r.t states.
+                        I may visit you when you're asleep to ask this, you
+                        know. 👻
                     </p>
                     <div class="tooltip" id="tooltip2" style="opacity:0"></div>
                     <div id="d3-map"></div>
-                    <p class='text-title'>Rural <i style="color:#16a085" class="fas fa-tractor"></i> Vs Urban <i style="color:#2980b9" class="fas fa-car-side"></i></p>
+                    <p class='text-para'>
+                        Hopefully by now you have a fair understanding of where "India resides". Gender is always tricky
+                        to deal with. There's not enough data to map out transgender folks, apologies for that. Also I may have used male-female interchangably with men-women, again because the data doesn't really differentiate. The
+                        issue of representative equality (and possibly economic equality) will come up for review in
+                        2026. The impact of missing women is already upon us. The first step in solving these issues is
+                        looking at them. Over snacks and pretty graphs, of course :)<br><br>Do shoot your thoughts and criticisms at me! And
+                        stay tuned for Chapter 2! Taaata!
+                    </p>
 
-                    <div id="d3-states-rurban"></div>
-
-                    <p class='text-title'>Case of the missing women</p>
-                    <!-- <div id="deck-map-2">
-                        <canvas id="deck-canvas-2"></canvas>
-                    </div> -->
                 </div>
-
             </div>
 
         </div>
-        <div id="section-2">
-            
-            <div id="d3-states"></div>
 
-
-
-        </div>
+        {% include "sharing.html" %}
+        {% include "footer.html" %}
 
         {#{% include "sharing.html" %}#}
         {#{% include "footer.html" %}#}

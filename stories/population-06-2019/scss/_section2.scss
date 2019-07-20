@@ -1,0 +1,41 @@
+$background-shade: #c0392b;
+$dark-shade: #333;
+$light-shade: #eee;
+$darkest: #122431;
+
+#section-2{
+    background-color:$dark-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px !important;
+}
+
+.white-text{
+    color: #fff;
+}
+
+.state-names-sratio,.state-names-age,.state-names-missingwomen{
+    font-size: 11px;
+    fill: #fff;
+}
+
+
+
+#section-3, #section-5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#section-4{
+    background-color:$dark-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px !important;
+}
