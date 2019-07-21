@@ -153,7 +153,7 @@ function section1() {
     const deck = new Deck({
         canvas: 'deck-canvas',
         // width: '60%',
-        height: '700px',
+        height: '400px',
         initialViewState: INITIAL_VIEW_STATE,
         controller: true,
         layers: [            

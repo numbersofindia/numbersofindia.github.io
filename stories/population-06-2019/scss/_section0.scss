@@ -1,3 +1,6 @@
+$break-small: 320px;
+$break-large: 1200px;
+
 body{
     font-family: 'Literata';
     font-size: 16px;
@@ -24,9 +27,23 @@ svg{
     text-transform: uppercase;
 }
 
-
+.logo-img{
+  @media screen and (min-width: $break-small) {
+    height:25px;
+  }
+    @media screen and (min-width: $break-large) {
+      height:45px;
+    }
+    
+}
 .nav-items{
-    padding: 10px 20px;
+  @media screen and (min-width: $break-small) {
+    padding: 10px 10px;
+      }
+    @media screen and (min-width: $break-large) {
+      padding: 10px 20px;
+    }
+    
     border-radius: 10px;
     color: #333 !important;
     text-decoration: none !important;
@@ -54,7 +71,14 @@ svg{
 
 .jumbo{
     color: #eee;
+    @media screen and (min-width: $break-small) {
+
+    font-size: 55px;
+      }
+    @media screen and (min-width: $break-large) {
+
     font-size: 120px;
+    }
     font-family: 'Josefin Sans';
 }
 .descrip{
@@ -75,7 +99,9 @@ svg{
 
 .text-para{
     text-align: justify;
-    margin: 15px 0px 15px 0px; 
+    margin: 15px 0px 15px 0px;
+    
+    padding: 0px 10px 0px 10px; 
 }
 
 .text-title{
@@ -100,12 +126,19 @@ svg{
 }
 
 .plot-title{
-    font-size: 30px;
+  @media screen and (min-width: $break-small) {
+    
+  font-size: 20px;
+  }
+    @media screen and (min-width: $break-large) {
+     
+  font-size: 30px;
+    }
 }
 
 
 #states-img{
-    width: 80%;
+    width: 100%;
     background: #fff;
 }
 
@@ -170,3 +203,211 @@ svg{
         font-weight: 300;
         letter-spacing: 0.5em;
         font-family: "Josefin Sans"; }
+
+
+
+
+
+
+
+        /* Main menu positionning */
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  // background: #FFF;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .375s;
+}
+
+.main-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+
+/* Yellow band effect */
+.main-nav::before {
+ content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px;
+  background: #fff;
+  transform-origin: 0 0;
+  transform: skew(-14deg) translateX(-120%);
+  transition: all .275s .1s;
+}
+
+.main-nav.is-open::before {
+  transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.main-nav ul {
+  display: inline-flex;
+  flex-direction: column;
+  height: 93%; /* Should be 100%, but we have a notice message :D */
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-18%) skew(-16deg);
+}
+
+.main-nav li {
+  display: block;
+  margin: .5rem 0;
+  text-align: right;
+  transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.main-nav a {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.main-nav.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.main-nav li:nth-child(1) a {
+transition: all 275ms 175ms
+}
+.main-nav li:nth-child(2) a {
+transition: all 275ms 225ms
+}
+.main-nav li:nth-child(3) a {
+transition: all 275ms 275ms
+}
+.main-nav li:nth-child(4) a {
+transition: all 275ms 325ms
+}
+.main-nav li:nth-child(5) a {
+transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.main-nav ul,
+.main-nav li {
+list-style: none;
+padding: 0;
+}
+.main-nav a {
+display: block;
+padding: 12px 0;
+color: #000;
+font-size: 1.4em;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+.open-main-nav {
+position: absolute;
+top: 15px;
+padding-top: 20px;
+right: 15px;
+z-index: 1000;
+background: none;
+border: 0;
+cursor: pointer;
+}
+.open-main-nav:focus {
+outline: none;
+}
+.burger {
+position: relative;
+display: block;
+width: 28px;
+height: 4px;
+margin: 0 auto;
+background: #000;
+transform: skew(5deg);
+transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+content: '';
+display: block;
+height: 100%;
+background: #000;
+transition: all .275s;
+}
+
+.burger:after {
+transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+transform: translateY(-12px) translateX(10px) skew(-20deg);
+  opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+display: block;
+font-size: .675rem;
+letter-spacing: .05em;
+margin-top: .5em;
+text-transform: uppercase;
+font-weight: 500;
+text-align: center;
+color: #000;
+}
+
+
+
+.notice {
+position: absolute;
+bottom: -15px;
+left: 0; right: 0;
+padding: 20px;
+background: rgb(124, 116, 116);
+color: #fff;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.5;
+z-index: 100;
+text-align: center;
+}
+.notice strong {
+font-weight: 700;
+}
+.notice a {
+padding: 2px 3px;
+background: #333;
+text-decoration: none;
+}
+
+#nav-big-screen{
+@media screen and (min-width: $break-small) and (max-width: $break-large){
+  display: none !important;
+    }
+  }
+  #nav-small-screen{
+  @media screen and (min-width: $break-large) {
+display: none !important;
+  }
+}

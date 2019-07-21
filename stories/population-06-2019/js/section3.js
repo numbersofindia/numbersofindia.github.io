@@ -1,4 +1,4 @@
-function bubbleStates(id,w,h, data, eachRow,unit){
+function bubbleStates(id,w,h, data, eachRow,unit, radius){
     const eachWidth = w/eachRow;
         const eachHeight = 100;
         const rectPaddingX = 20;
@@ -74,14 +74,14 @@ function bubbleStates(id,w,h, data, eachRow,unit){
                 })
                 .attr('cy',function(p,q){
                     return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
-                }).attr('r',2.5)
+                }).attr('r',radius)
                 
                 gBalls.selectAll('.balls-filled').transition().delay(1000).duration(500).delay(function(p,q){
                     return parseInt(q/10)*100;
                 })
                 .attr('cy',function(p,q){
                     return ((eachWidth - (2*rectPaddingX))/bubbleEdge)*(parseInt(q/bubbleEdge));
-                }).attr('r',2.5)
+                }).attr('r',radius)
                
         
     
@@ -104,18 +104,16 @@ function bubbleStates(id,w,h, data, eachRow,unit){
 
 }
 
-function bubbleStatesVertical(id,w,h, data){
-    const eachCol = 10;
+function bubbleStatesVertical(id,w,h, data, eachCol, cols, bubbleEdge){
     const eachHeight = h/eachCol;
-        const eachWidth = w/3;
-        const bubbleEdge = 25;
+        const eachWidth = w/cols;
 
     var svg = d3.select(id).append('svg').attr('width',w).attr('height',h);
         svg.selectAll('.state-names-density').data(data.filter(function(k){
             return k['s/u']==='s'
         })).enter().append('text')
         .attr('x',function(d,i){
-            return parseInt(i/eachCol)*eachWidth+ 100;
+            return parseInt(i/eachCol)*eachWidth+ 90;
         })
         .attr('y',function(d,i){
             return (i%eachCol)*eachHeight+10;
@@ -129,7 +127,7 @@ function bubbleStatesVertical(id,w,h, data){
             return k['s/u']==='s'
         })).enter().append('g')
         .style('transform',function(d,i){
-            return 'translate('+(parseInt(i/eachCol) * eachWidth + 120)+'px,'+(parseInt(i%eachCol) * eachHeight + 5)+'px)';
+            return 'translate('+(parseInt(i/eachCol) * eachWidth + 100)+'px,'+(parseInt(i%eachCol) * eachHeight + 5)+'px)';
         });
 
         gBalls.selectAll('.balls-filled-missing').data(function(d){
@@ -195,7 +193,7 @@ function bubbleStatesVertical(id,w,h, data){
               });
 }
 
-function eitherSide(id,w,h,data, leftIcon, rightIcon){
+function eitherSide(id,w,h,data, radius, xmultiplier){
     const ruralOrder = data.filter(function(k){
         return k['s/u']==='s'
     }).sort(function(b,a) {
@@ -216,10 +214,9 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
     const eachHeight = h/data.filter(function(k){
         return k['s/u']==='s'
     }).length;
-    const radius = 5;
     
-    var importedNodeLeft = document.importNode(leftIcon.documentElement, true);
-    var importedNodeRight = document.importNode(rightIcon.documentElement, true);
+    // var importedNodeLeft = document.importNode(leftIcon.documentElement, true);
+    // var importedNodeRight = document.importNode(rightIcon.documentElement, true);
     
 
     var svg = d3.select(id).append('svg').attr('width',w).attr('height',h);
@@ -241,7 +238,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
         return k['s/u']==='s'
     })).enter().append('g').attr('class','state-g-density-left')
     .style('transform',function(d,i){
-        return 'translate('+(w/2 - 300)+'px,'+(i*eachHeight + 15)+'px)';
+        return 'translate('+(w/2 - 290)+'px,'+(i*eachHeight + 15)+'px)';
     });
 
 
@@ -257,7 +254,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
         return Array.from(Array(numBalls)).map(function(k){return 0;});
     }).enter().append('circle')
     .attr('cx',function(p,q){
-        return (230-q*23);
+        return (230-q*xmultiplier);
     })
     .attr('cy',function(p,q){
         return 0;
@@ -275,7 +272,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
         // return Array.from(Array()).map(function(k){return 0;});
     }).enter().append('circle')
     .attr('cx',function(p,q){
-        return (q*23)+30;
+        return (q*xmultiplier)+30;
     })
     .attr('cy',function(p,q){
         return 0;
@@ -314,7 +311,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
         return Array.from(Array(numBalls)).map(function(k){return 0;});
     }).enter().append('circle')
     .attr('cx',function(p,q){
-        return (230-q*23);
+        return (230-q*xmultiplier);
     })
     .attr('cy',function(p,q){
         return 0;
@@ -328,7 +325,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
         return Array.from(Array(numBalls)).map(function(k){return 0;});
     }).enter().append('circle')
     .attr('cx',function(p,q){
-        return (q*23)+30;
+        return (q*xmultiplier)+30;
     })
     .attr('cy',function(p,q){
         return 0;
@@ -354,7 +351,7 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
             });
 
             d3.selectAll('.state-g-density-left').transition().delay(1000).duration(2000).style('transform',function(d,i){
-                return 'translate('+(w/2 - 300)+'px,'+(ruralOrder.indexOf(origOrder[i])*eachHeight + 15)+'px)';
+                return 'translate('+(w/2 - 290)+'px,'+(ruralOrder.indexOf(origOrder[i])*eachHeight + 15)+'px)';
             });
 
 
@@ -388,10 +385,9 @@ function eitherSide(id,w,h,data, leftIcon, rightIcon){
 
 
 
-function areaStates(id,w,h, data, eachRow,unit){
+function areaStates(id,w,h, data, eachRow,unit, rectPaddingX){
     const eachWidth = w/eachRow;
         const eachHeight = 100;
-        const rectPaddingX = 20;
         const rectPaddingY = 10;
         const bubbleEdge = 10;
 
@@ -466,18 +462,18 @@ function areaStates(id,w,h, data, eachRow,unit){
         gBalls.append('text').attr('x',scaleX(5)).attr('y',scaleYDown(23)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#27ae60').text(function(d){return Math.round(d.avg_male_rural)});
         gBalls.append('text').attr('x',scaleX(7.1)).attr('y',scaleYDown(23)).attr('text-anchor','middle').attr('class','age-text').attr('fill','#2980b9').text(function(d){return Math.round(d.avg_male_urban)});
 
-        svg.append('text').attr('x',600).attr('y',335).attr('text-anchor','middle').attr('class','age-text').attr('fill','#c0392b').text("Avg. Age Rural Female");
-        svg.append('text').attr('x',725).attr('y',335).attr('text-anchor','middle').attr('class','age-text').attr('fill','#f39c12').text("Avg. Age Urban Female");
-        svg.append('text').attr('x',600).attr('y',365).attr('text-anchor','middle').attr('class','age-text').attr('fill','#27ae60').text("Avg. Age Rural Male");
-        svg.append('text').attr('x',725).attr('y',365).attr('text-anchor','middle').attr('class','age-text').attr('fill','#2980b9').text("Avg. Age Urban Male");
+        svg.append('text').attr('x',w-200).attr('y',h-65).attr('text-anchor','middle').attr('class','age-text').attr('fill','#c0392b').text("Avg. Age Rural Female");
+        svg.append('text').attr('x',w-75).attr('y',h-65).attr('text-anchor','middle').attr('class','age-text').attr('fill','#f39c12').text("Avg. Age Urban Female");
+        svg.append('text').attr('x',w-200).attr('y',h-35).attr('text-anchor','middle').attr('class','age-text').attr('fill','#27ae60').text("Avg. Age Rural Male");
+        svg.append('text').attr('x',w-75).attr('y',h-35).attr('text-anchor','middle').attr('class','age-text').attr('fill','#2980b9').text("Avg. Age Urban Male");
         
        
 }
 
-function linePlots(id,w,h){
+function linePlots(id,w,h, ticks){
     var svg = d3.select(id).append('svg').attr('width',w).attr('height',h)
     svg.append('rect').attr('x',0).attr('y',0).attr('width',w).attr('height',h).attr('fill','#eee');
-    const paddingX = 100;
+    const paddingX = 35;
     const paddingY = 50;
     var xScale = d3.scaleLinear().domain([1960,2018]).range([paddingX,w-paddingX]);
     var yScale = d3.scaleLinear().domain([450547679,1352617328]).range([h-paddingY,paddingY]);
@@ -506,12 +502,12 @@ function linePlots(id,w,h){
     svg.append("g")
     .attr("class", "x axis")
     .attr("transform", "translate(0," + (h-paddingY) + ")")
-    .call(d3.axisBottom(xScale).tickFormat(d3.format("d")).tickSize(2*paddingY-h)); // Create an axis component with d3.axisBottom
+    .call(d3.axisBottom(xScale).tickFormat(d3.format("d")).tickSize(2*paddingY-h).ticks(ticks)); // Create an axis component with d3.axisBottom
 
     svg.append("g")
     .attr("class", "y axis")
     .attr("transform", "translate("+paddingX+",0)")
-    .call(d3.axisLeft(yScale).tickSize(-w+2*paddingX).tickFormat(function(d) { return d/1000000 + " Mil"; })); // Create an axis component with d3.axisLeft
+    .call(d3.axisLeft(yScale).tickSize(-w+2*paddingX).tickFormat(function(d) { return d/1000000000 + " Bil"; })); // Create an axis component with d3.axisLeft
     
     svg.append("g")
     .attr("class", "y axis")
@@ -537,10 +533,10 @@ function linePlots(id,w,h){
     .attr('stroke-width',3)
     .attr('stroke-dasharray','5 2')
 
-    svg.append('line').attr('x1',150).attr('y1',20).attr('x2',180).attr('y2',20).attr('stroke','#e74c3c').attr('stroke-width',3);
-    svg.append('line').attr('x1',450).attr('y1',20).attr('x2',480).attr('y2',20).attr('stroke','#3498db').attr('stroke-width',3).attr('stroke-dasharray','5 2');
-    svg.append('text').attr('x',190).attr('y',25).attr('fill','#333').text('Population');
-    svg.append('text').attr('x',490).attr('y',25).attr('fill','#333').text('Fertility Rate');
+    svg.append('line').attr('x1',150*w/800).attr('y1',20).attr('x2',150*w/800+30).attr('y2',20).attr('stroke','#e74c3c').attr('stroke-width',3);
+    svg.append('line').attr('x1',450*w/800).attr('y1',20).attr('x2',450*w/800+30).attr('y2',20).attr('stroke','#3498db').attr('stroke-width',3).attr('stroke-dasharray','5 2');
+    svg.append('text').attr('x',150*w/800+40).attr('y',25).attr('fill','#333').text('Population');
+    svg.append('text').attr('x',450*w/800+40).attr('y',25).attr('fill','#333').text('Fertility Rate');
 
     appear({
         init: function init(){
@@ -570,17 +566,32 @@ function linePlots(id,w,h){
 
 
 function section3(){
-    Promise.all([d3.csv('./res/states.csv'), d3.xml('./res/field.svg'), d3.xml('./res/building.svg')]).then(function(data) {
+    Promise.all([d3.csv('./res/states.csv')]).then(function(data) {
         // Promise.all([d3.csv('./res/states.csv'), d3.xml('./res/farmer.svg'), d3.xml('./res/businesswoman.svg')]).then(function(data) {
-        var farmer = data[1];
-        var businesswoman = data[2];
+        // var farmer = data[1];
+        // var businesswoman = data[2];
         data = data[0];
+
+        if(window.innerWidth<500){
+
+        const eachRow = 4;
+            bubbleStates('#d3-states-sratio',350,800, data, eachRow,'sexratio', 1.5);
+            bubbleStatesVertical('#d3-states-missing',350,400, data, 15,2, 15);
+            eitherSide('#d3-states-rurban',350,600,data, 3, 12);
+            areaStates('#d3-states',350,800, data, eachRow,'sexratio',5);
+            linePlots('#d3-states-1',350,400,5);    
+        }
+
+        else{
+
         const eachRow = 8;
-        bubbleStates('#d3-states-sratio',800,400, data, eachRow,'sexratio');
-        bubbleStatesVertical('#d3-states-missing',700,400, data);
-        eitherSide('#d3-states-rurban',700,600,data, farmer, businesswoman);
-        areaStates('#d3-states',800,400, data, eachRow,'sexratio');
-        linePlots('#d3-states-1',800,400);
+            bubbleStates('#d3-states-sratio',800,400, data, eachRow,'sexratio', 2.5);
+        bubbleStatesVertical('#d3-states-missing',700,400, data, 10,3, 25);
+        eitherSide('#d3-states-rurban',700,600,data, 5, 23);
+        areaStates('#d3-states',800,400, data, eachRow,'sexratio',20);
+        linePlots('#d3-states-1',800,400,10);
+        
+        }
         
 
         

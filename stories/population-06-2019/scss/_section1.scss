@@ -13,7 +13,7 @@ $darkest: #122431;
 }
 
 #deck-map, #deck-map-2{
-    height: 700px;
+    height: 400px;
     display: flex;
     position: relative;
     // width: 60%;
@@ -58,6 +58,10 @@ $darkest: #122431;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#d3-states-1{
+    background: #eee;
 }
 
 .age-text{

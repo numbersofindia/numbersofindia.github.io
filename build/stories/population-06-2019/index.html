@@ -52,10 +52,29 @@
     <div id="main">
         <div id="navbar">
             <div style="justify-content: center; display: flex; flex-direction: column"><a href="/"><img
-                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
+                        src="../../res/imgs/noi_nav.png" class='logo-img'></div></a>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-big-screen'>
                 <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                <a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
                 <a class="nav-items" href="#footer">Contact</a>
+            </div>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-small-screen'>
+            <button id="burger" class="open-main-nav">
+                    <span class="burger"></span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <li>
+                                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                        </li>
+                        <li><a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
+                            
+                        </li>
+                        <li>
+                                <a class="nav-items" href="#footer">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
         <div id="section-0">
@@ -382,7 +401,7 @@
     </div>
 </div>
 <div class="row center-lg center-md">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="fb-comments" data-href="https://numbersofindia.github.io/stories/population-06-2019/" data-width="" data-numposts="5"></div>
         </div>
 </div>

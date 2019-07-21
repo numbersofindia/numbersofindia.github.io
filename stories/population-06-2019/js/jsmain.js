@@ -44,6 +44,8 @@ window.onload=function(){
         
     $('#load-icon').hide();
     $('#main-content').show();    
+    
+    nav();
     section1();
     section2();
     section3(); 

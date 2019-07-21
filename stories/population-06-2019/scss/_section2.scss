@@ -17,7 +17,12 @@ $darkest: #122431;
 }
 
 .state-names-sratio,.state-names-age,.state-names-missingwomen{
-    font-size: 11px;
+    @media screen and (min-width: $break-small) {
+        font-size: 9px;
+      }
+        @media screen and (min-width: $break-large) {
+            font-size: 11px;
+        }
     fill: #fff;
 }
 

@@ -111,10 +111,9 @@ function choropleth2(data, states, svg, path){
 
 
 
-function choropleth(data, states, svg, path){
+function choropleth(data, states, svg, path, radius, xdelta, ydelta,w,h ){
 
-    var projection = d3.geoMercator().scale(1100).translate([-1310,780]);
-
+   
         var title = 'If India was made of'
         var subtitle = '100 people';
 
@@ -132,8 +131,8 @@ function choropleth(data, states, svg, path){
             .style("stroke", "#777")
             .style("stroke-width", "0.1px");
 
-                svg.append('text').attr('x',400).attr('y',125).attr('fill','#333').attr('class','plot-title').attr('text-anchor','middle').text(title);
-                svg.append('text').attr('x',400).attr('y',160).attr('fill','#c0392b').attr('class','plot-title').attr('text-anchor','middle').text(subtitle);
+                svg.append('text').attr('x',w*2/3).attr('y',h/5).attr('fill','#333').attr('class','plot-title').attr('text-anchor','middle').text(title);
+                svg.append('text').attr('x',w*2/3).attr('y',h/5+35).attr('fill','#c0392b').attr('class','plot-title').attr('text-anchor','middle').text(subtitle);
 
                 data.features.forEach(function(k){
                     // console.log(k.properties.st_name.replace(" & ",'-').replace(" ",'-'), d);
@@ -163,7 +162,7 @@ function choropleth(data, states, svg, path){
                         // svg.append('g').append('circle').attr('cx',cent_fin[0]).attr('cy',cent_fin[1]).attr('r',10)
                         // .attr('stroke','#fff').attr('stroke-width',2).attr('fill','#333').style('pointer-events','none');
                         
-                        clusterPopulation(svg_peeps,cent_fin[0]-10,cent_fin[1]-10,entry_temp.values);
+                        clusterPopulation(svg_peeps,cent_fin[0]-10,cent_fin[1]-10,entry_temp.values,xdelta,ydelta);
     
                 })
                 var tooltipDiv = d3.select("#tooltip2");
@@ -210,7 +209,7 @@ function choropleth(data, states, svg, path){
                     //   return document.getElementsByClassName('d3-states-1');
                     },
                     appear: function appear(el){
-                        d3.selectAll('.perc-map-circles').transition().delay(200).duration(2000).attr("r", 5);
+                        d3.selectAll('.perc-map-circles').transition().delay(200).duration(2000).attr("r", radius);
             
             
                     },
@@ -226,11 +225,9 @@ function choropleth(data, states, svg, path){
 
 
 
-function clusterPopulation(svg_temp, x,y,value){
+function clusterPopulation(svg_temp, x,y,value,xdelta,ydelta){
     const cols = 4;
     const rows= Math.ceil(value/cols); 
-    const xdelta = 15;
-    const ydelta = 16;
     const topLeftX = x-(16*cols/2) +16;
     const topLeftY = y-(16*rows/2) + 16;
     
@@ -262,12 +259,27 @@ function section2(){
     Promise.all([d3.json('./res/india.geojson'),d3.csv('./res/states.csv')]).then(function(data) {
         var states= data[1];
         data = data[0];
-        var projection = d3.geoMercator().scale(1100).translate([-1310,780]);
+        
+            
+                if(window.innerWidth<500){
+                    var projection = d3.geoMercator().scale(600).translate([-700,430]);
                 var path = d3.geoPath()
                 .projection(projection);
-                var svg = d3.select('#d3-map').append('svg').attr('width',600).attr('height',650);
-                
-            choropleth(data, states, svg, path);
+                    var svg = d3.select('#d3-map').append('svg').attr('width',350).attr('height',350);
+                    
+
+            choropleth(data, states, svg, path, 3,10,11,350,350);
+                }
+                else{
+                    var projection = d3.geoMercator().scale(1100).translate([-1310,780]);
+                var path = d3.geoPath()
+                .projection(projection);
+                    var svg = d3.select('#d3-map').append('svg').attr('width',600).attr('height',650);
+                    
+                    choropleth(data, states, svg, path, 5,15,16,600,650);
+            
+                }
+            
 
             
             
