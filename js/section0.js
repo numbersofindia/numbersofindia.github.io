@@ -1,5 +1,5 @@
 function section0() {
-    console.log(screen);
+    // console.log(screen, window);
     var c = document.getElementById("title-canvas");
     var ctx = c.getContext("2d");
 
