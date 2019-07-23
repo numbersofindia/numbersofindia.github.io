@@ -16,7 +16,7 @@
         "link": "https://the-ken.com/story/india-green-energy-charts/",
         "img": "./res/imgs/ken-energy.jpg",
         "tags": ["politics"],
-        "date": "April 2019 [Pre NOI]",
+        "date": "April 2019",
         "read_time": 15,
         "story_type": "story",
         "author": "Vivek Aithal"
@@ -27,7 +27,7 @@
         "link": "https://vivekaithal.co/mishtidoi",
         "img": "./res/imgs/mishtidoi.png",
         "tags": ["entertainment","business"],
-        "date": "Feb 2019 [Pre NOI]",
+        "date": "Feb 2019",
         "read_time": 15,
         "story_type": "story",
         "author": "Vivek Aithal"
@@ -38,7 +38,7 @@
         "link": "https://vivekaithal.co/shoutitout",
         "img": "./res/imgs/arnab.png",
         "tags": ["news","politics"],
-        "date": "Oct 2017 [Pre NOI]",
+        "date": "Oct 2017",
         "read_time": 10,
         "story_type": "story",
         "author": "Vivek Aithal"
@@ -49,7 +49,7 @@
         "link": "https://vivekaithal.co/twentytwoyards",
         "img": "./res/imgs/ipl.png",
         "tags": ["sports"],
-        "date": "Sep 2017 [Pre NOI]",
+        "date": "Sep 2017",
         "read_time": 10,
         "story_type": "story",
         "author": "Vivek Aithal"
@@ -60,7 +60,7 @@
         "link": "http://numbersofindia.github.io/stories/ls2014/",
         "img": "./res/imgs/ls2014.jpg",
         "tags": ["politics"],
-        "date": "Sep 2017 [Pre NOI]",
+        "date": "Sep 2017",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Vivek Aithal"
@@ -71,7 +71,7 @@
         "link": "http://numbersofindia.github.io/stories/pollution/",
         "img": "./res/imgs/pollution.png",
         "tags": ["news"],
-        "date": "Oct 2016 [Pre NOI]",
+        "date": "Oct 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -82,7 +82,7 @@
         "link": "http://numbersofindia.github.io/stories/road-accidents/",
         "img": "./res/imgs/road_accidents.png",
         "tags": ["news"],
-        "date": "Aug 2016 [Pre NOI]",
+        "date": "Aug 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -93,7 +93,7 @@
         "link": "http://numbersofindia.github.io/stories/bschool/",
         "img": "./res/imgs/bschools.png",
         "tags": ["news","business"],
-        "date": "May 2016 [Pre NOI]",
+        "date": "May 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -104,7 +104,7 @@
         "link": "http://numbersofindia.github.io/stories/khans/",
         "img": "./res/imgs/khans.jpg",
         "tags": ["entertainment"],
-        "date": "Apr 2016 [Pre NOI]",
+        "date": "Apr 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -116,7 +116,7 @@
         "link": "http://numbersofindia.github.io/stories/gender/",
         "img": "./res/imgs/gender.png",
         "tags": ["business"],
-        "date": "Mar 2016 [Pre NOI]",
+        "date": "Mar 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -127,7 +127,7 @@
         "link": "http://numbersofindia.github.io/stories/tourists/",
         "img": "./res/imgs/tourists.png",
         "tags": ["news"],
-        "date": "Mar 2016 [Pre NOI]",
+        "date": "Mar 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -138,7 +138,7 @@
         "link": "http://numbersofindia.github.io/stories/tvf/",
         "img": "./res/imgs/tvf.jpg",
         "tags": ["entertainment"],
-        "date": "Feb 2016 [Pre NOI]",
+        "date": "Feb 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -149,7 +149,7 @@
         "link": "http://numbersofindia.github.io/stories/ipl/",
         "img": "./res/imgs/ipl2.jpg",
         "tags": ["sports"],
-        "date": "Feb 2016 [Pre NOI]",
+        "date": "Feb 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -160,7 +160,7 @@
         "link": "http://numbersofindia.github.io/stories/bollywood-ratings/",
         "img": "./res/imgs/bollywood.png",
         "tags": ["entertainment"],
-        "date": "Jan 2016 [Pre NOI]",
+        "date": "Jan 2016",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -172,7 +172,7 @@
         "link": "http://numbersofindia.github.io/stories/population-density/",
         "img": "./res/imgs/population.jpg",
         "tags": ["news"],
-        "date": "Dec 2015 [Pre NOI]",
+        "date": "Dec 2015",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -183,7 +183,7 @@
         "link": "http://numbersofindia.github.io/stories/rising-temperature/",
         "img": "./res/imgs/temperature.png",
         "tags": ["news"],
-        "date": "Dec 2015 [Pre NOI]",
+        "date": "Dec 2015",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
@@ -194,7 +194,7 @@
         "link": "http://numbersofindia.github.io/stories/startups/",
         "img": "./res/imgs/startups.jpg",
         "tags": ["news","business"],
-        "date": "Dec 2015 [Pre NOI]",
+        "date": "Dec 2015",
         "read_time": 2,
         "story_type": "infographic",
         "author": "Akash Mukherjee"
