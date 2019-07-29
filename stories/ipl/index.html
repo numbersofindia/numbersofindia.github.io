@@ -14,27 +14,32 @@
 <body>
     {% include "fb.html" %}
     <div id="main">
-        <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="https://numbersofindia.github.io/"><img
-                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
-                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
-                <a class="nav-items" href="#footer">Contact</a>
-            </div>
-        </div>
-        <!-- <div id="section-0">
-            
-        </div>
-        <div id="section-1">
-            <div id="deck-map">
-                <canvas id="deck-canvas"></canvas>
-            </div>
-            
-        </div> -->
+            {% include "navbar.html" %}
         <div id="section-2" class="row center-lg center-md">
             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                 <img src="res/ipl.jpg" style="width: 100%">
+                <div class="text-para">
+                        #IPL Season 9, 2016 is about to start in April.
+                        We looked back at the eight seasons till now, to find out which teams have consistently been at top across seasons and which ones were inconsistent.
+                        
+                        <br>Clearly, Chennai Super Kings, previously led by Mahendra Singh Dhoni has been the most consistent team. They landed a spot in the top 4 in each and every season.
+                        
+                        Apart from CSK, Mumbai Indians and Kolkata Knight Riders won the IPL two times each.
+                        Rajasthan Royals, had a drastic fall in rankings, after their first season championship. But, they have shown signs of recovery in the recent seasons. Unfortunately, they won't be part of #IPL 2016.
+                        
+                        Delhi Daredevils and Kings XI Punjab had the bumpiest rides across eight seasons. However, looking at their squads, we see huge potential in them to snatch the top spots in 2016.
+                        Royal Challengers Bangalore has been so close to winning an IPL multiple times. We would love to see them win this year.
+                        Deccan Chargers/SunRisers Hyderabad had won the championship in 2009. But, it's time they pull up their socks and raise the bar.
+                        <br><br>
+                        IPL - Indian Premier League 2016 has two new teams joining us:
+                        The Gujarat Lions and Rising Pune Supergiants
+                        We're super excited to watch them surprise us.
+                        
+                        Who do you think is going to win #IPL 2016? Let us know in the comments below.
+                        
+                </div>
             </div>
+            
         </div>
 
         {% include "sharing.html" %}

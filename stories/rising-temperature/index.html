@@ -14,26 +14,25 @@
 <body>
     {% include "fb.html" %}
     <div id="main">
-        <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="https://numbersofindia.github.io/"><img
-                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
-                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
-                <a class="nav-items" href="#footer">Contact</a>
-            </div>
-        </div>
-        <!-- <div id="section-0">
-            
-        </div>
-        <div id="section-1">
-            <div id="deck-map">
-                <canvas id="deck-canvas"></canvas>
-            </div>
-            
-        </div> -->
+            {% include "navbar.html" %}
         <div id="section-2" class="row center-lg center-md">
             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                 <img src="res/temperature.png" style="width: 100%">
+                <div class="text-para">
+                        India became hotter by 3.5% (~1°C) over last 100 years, most of it witnessed in last 20 years.
+                        National Average Temperature of India rose by 3.5% (~1°C) over the last 100 years (1915-2014).
+                        Looking at 5-year moving averages year over year, we see that there was a significant bump in temperature post-1976 and another major rise in temperature after year 1994.
+                        <br>
+                        Clearly India has gotten a lot hotter in the last 20 years. What could have happened in the last 20 years, which caused this?<br>Some clues:
+                        <ul>
+                            <li>Rise in Industrialization</li>
+                            <li>Rise in cars emitting CO2</li>
+                            <li>Rise in Deforestation</li>
+                        </ul>
+                        
+                    
+                        
+                </div>
             </div>
         </div>
 

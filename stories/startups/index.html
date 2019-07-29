@@ -14,26 +14,28 @@
 <body>
     {% include "fb.html" %}
     <div id="main">
-        <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="https://numbersofindia.github.io/"><img
-                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
-                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
-                <a class="nav-items" href="#footer">Contact</a>
-            </div>
-        </div>
-        <!-- <div id="section-0">
-            
-        </div>
-        <div id="section-1">
-            <div id="deck-map">
-                <canvas id="deck-canvas"></canvas>
-            </div>
-            
-        </div> -->
+            {% include "navbar.html" %}    
         <div id="section-2" class="row center-lg center-md">
             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                
                 <img src="res/startups.jpg" style="width: 100%">
+                <p class="text-para">
+                        YourStory recently published their list of India's top 100 Startups for 2015.
+                        We couldn't wait to play with the data and visualize it differently to gain some quick insights.<br><br>
+                        
+                        Here are some quick observations:</p>
+                        <ul class="text-para">
+                        <li>eCommerce and Foodtech/Hyperlocal/Logistics pretty much dominate the Top 25 list</li>
+                        <li>Not even a single SaaS/Enterprise startup made it into the Top 25 list</li>
+                        <li>There's a more balanced distribution of industry domains amongst the bottom 50 ranked (rank 51-100) startups of INDIA 100</li>
+                        <li>Overall, eCommerce/Marketplace and Consumer startups are still industry favorites, while Foodtech is expected to catch up sooner than later.</li>
+                        <li>Education startups could hardly make a mark in INDIA 100. This is interesting because in the last couple of years, there's been a huge rise in Education startups.</li>
+                    </ul>
+                    
+                    <p class="text-para">
+                            <a href="http://yourstory.com/2015/12/india-100-top-startups-2015/">Here's the link</a> to the original post by YourStory:
+                    </p>
+                
             </div>
         </div>
 

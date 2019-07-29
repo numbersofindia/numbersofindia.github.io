@@ -24,7 +24,7 @@
     <link rel="icon" href="../../res/imgs/favicon.ico" type="image/x-icon" />
 <!-- <script type="module" src="jsmain.js"></script> -->
 <link rel="stylesheet" href="cssmain.css">
-<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed|Literata" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -50,26 +50,46 @@
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3&appId=300936        117042821&autoLogAppEvents=1"></script>
     <div id="main">
-        <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="https://numbersofindia.github.io/"><img
-                        src="../../res/imgs/noi_nav.png" style="height:45px"></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center">
+            <div id="navbar">
+            <div style="justify-content: center; display: flex; flex-direction: column"><a href="/"><img
+                        src="../../res/imgs/noi_nav.png" class='logo-img'></div></a>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-big-screen'>
                 <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                <a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
                 <a class="nav-items" href="#footer">Contact</a>
             </div>
-        </div>
-        <!-- <div id="section-0">
-            
-        </div>
-        <div id="section-1">
-            <div id="deck-map">
-                <canvas id="deck-canvas"></canvas>
+            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-small-screen'>
+            <button id="burger" class="open-main-nav">
+                    <span class="burger"></span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <li>
+                                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
+                        </li>
+                        <li><a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
+                            
+                        </li>
+                        <li>
+                                <a class="nav-items" href="#footer">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            
-        </div> -->
+        </div>
         <div id="section-2" class="row center-lg center-md">
             <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
                 <img src="res/tvf.jpg" style="width: 100%">
+                <div class="text-para">
+                        Permanent Roommates is coming back on the internet tomorrow.
+                        Being huge fans of TVF, like the rest of the nation, we decided to take a look back at Season 1.
+                        
+                        PR Season 1 captivated us with the freshness and humor in a relationship, with which we could all relate to. Even data proves that it struck the right emotional chords with the Indian audience.
+                        <br><br>
+                        We can't wait for Permanent Roommates Season 2!
+                        
+                        
+                </div>
             </div>
         </div>
 
@@ -96,7 +116,7 @@
     </div>
 </div>
 <div class="row center-lg center-md">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="fb-comments" data-href="https://numbersofindia.github.io/stories/tvf/" data-width="" data-numposts="5"></div>
         </div>
 </div>
@@ -106,8 +126,9 @@
             <p class="poem">Do you have a project/idea you wish to discuss?<br>
                 I'd love to speak with you.<br>
                 Over coffee or beer, would be a plus<br>
-                Or a simple text will do, too.<br>
-                vivekaithal44[at]gmail[dot]com<br>+91-9916733098
+                Or a simple text will do, too.<br><br>
+                hello[dot]akashm[at]gmail[dot]com<br>
+                vivekaithal44[at]gmail[dot]com
             </p>
         </div>
         <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
@@ -142,8 +163,8 @@
             <div>
                 <i class="fab faby fa-facebook"
                     onclick="window.open('https://www.facebook.com/numbersofindia','_blank')"></i>
-                <!-- <i class="fab fa-twitter" onclick="window.open('https://twitter.com/nuwandavek','_blank')"></i>
-                <i class="fab fa-youtube"
+                <i class="fab fa-twitter" onclick="window.open('https://twitter.com/numbersofindia','_blank')"></i>
+                <!--<i class="fab fa-youtube"
                     onclick="window.open('https://www.youtube.com/user/thegreybit/','_blank')"></i> -->
                 <i class="fab faby fa-instagram"
                     onclick="window.open('https://www.instagram.com/numbersofindia/','_blank')"></i>

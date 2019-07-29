@@ -20,33 +20,8 @@
 <body>
     {% include "fb.html" %}
     <div id="main">
-        <div id="navbar">
-            <div style="justify-content: center; display: flex; flex-direction: column"><a href="/"><img
-                        src="../../res/imgs/noi_nav.png" class='logo-img'></div></a>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-big-screen'>
-                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
-                <a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
-                <a class="nav-items" href="#footer">Contact</a>
-            </div>
-            <div style="justify-content: center; display: flex; flex-direction: row; align-items:  center" id='nav-small-screen'>
-            <button id="burger" class="open-main-nav">
-                    <span class="burger"></span>
-                </button>
-                <nav class="main-nav" id="main-nav">
-                    <ul>
-                        <li>
-                                <a class="nav-items" href="https://numbersofindia.github.io/index.html#section-3">Stories</a>
-                        </li>
-                        <li><a class="nav-items" href="https://tinyletter.com/nuwandavek/archive">Newsletters</a>
-                            
-                        </li>
-                        <li>
-                                <a class="nav-items" href="#footer">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        
+    {% include "navbar.html" %}
         <div id="section-0">
             <p class='jumbo'>
                 POPULATION
