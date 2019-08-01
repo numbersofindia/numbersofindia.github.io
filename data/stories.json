@@ -1,11 +1,22 @@
 [
     {
+        "title": "Women in Parliament",
+        "description": "A brief peek into the number of women lawmakers in the Loksabha." ,
+        "link": "https://numbersofindia.github.io/stories/women-in-parliament/",
+        "img": "./res/imgs/women_in_parliament.png",
+        "tags": ["politics"],
+        "date": "Aug 2019",
+        "read_time": 3,
+        "story_type": "infographic",
+        "author": "Vivek Aithal"
+    },
+    {
         "title": "Population : Chapter 1",
         "description": "Understanding Indians through geography, age and sex. [Unequal Indians, Missing Women, etc.]" ,
         "link": "https://numbersofindia.github.io/stories/population-06-2019/",
         "img": "./res/imgs/population_chapter1.png",
         "tags": ["politics"],
-        "date": "July 2019",
+        "date": "Jul 2019",
         "read_time": 15,
         "story_type": "story",
         "author": "Vivek Aithal"
@@ -16,7 +27,7 @@
         "link": "https://the-ken.com/story/india-green-energy-charts/",
         "img": "./res/imgs/ken-energy.jpg",
         "tags": ["politics"],
-        "date": "April 2019",
+        "date": "Apr 2019",
         "read_time": 15,
         "story_type": "story",
         "author": "Vivek Aithal"
