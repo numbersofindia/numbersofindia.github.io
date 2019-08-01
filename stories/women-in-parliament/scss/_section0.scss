@@ -1,0 +1,70 @@
+$break-small: 320px;
+$break-large: 1200px;
+
+
+
+#section-0{
+    // height: 100vh;
+    background: #222;
+}
+
+.white-text{
+    font-size: 12px;
+}
+
+#svg-div{
+    @media screen and (min-width: $break-small) {
+
+        margin-top: 50px;
+      }
+    @media screen and (min-width: $break-large) {
+
+        margin: 50px;
+    }
+}
+
+.lok-big{
+    text-transform: uppercase;
+    font-family: 'Josefin Sans';
+    @media screen and (min-width: $break-small) {
+
+        font-size: 16px;
+        letter-spacing: 15px;
+          }
+    @media screen and (min-width: $break-large) {
+
+        font-size: 25px;
+        letter-spacing: 15px;
+        }
+}
+.lok-big-2{
+    font-size: 16px;
+    // letter-spacing: 15px;
+    // text-transform: uppercase;
+    font-family: 'Literata';
+    fill: #fff;
+}
+
+.women-bar, .allies-rect{
+    opacity: 0.8;
+}
+.men-bar{
+    opacity: 0.6;
+    fill: #444;
+}
+
+.title-svg{
+    fill: #eee;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans';
+    @media screen and (min-width: $break-small) {
+
+        font-size: 20px;
+        letter-spacing: 5px;
+      }
+    @media screen and (min-width: $break-large) {
+
+        font-size: 60px;
+        letter-spacing: 3px;
+    }
+}

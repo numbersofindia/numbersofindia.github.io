@@ -2,15 +2,13 @@
 <html>
 
 <head>
-    
-        <title>numbersofindia</title>
+    <title>Women in Parliament</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta property="og:url" content="https://numbersofindia.github.io/" />
+    <meta property="og:url" content="https://numbersofindia.com/stories/women-in-parliament/" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Numbers of India" />
-    <meta property="og:description"
-        content="A collection of data stories & visualizations exploring Indian politics, business, entertainment, news and sports" />
-    <meta property="og:image" content="https://dl.dropboxusercontent.com/s/m9yzy5l9sqdcgq5/noi.png" />
+    <meta property="og:title" content="Women In Parliament" />
+    <meta property="og:description" content="A brief look at women lawmakers in the Loksabha" />
+    <meta property="og:image" content="../../res/imgs/women_in_parliament.png" />
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59236300-6"></script>
     <script>
@@ -22,7 +20,7 @@
     </script>
 
     <link rel="icon" href="../../res/imgs/favicon.ico" type="image/x-icon" />
-<!-- <script type="module" src="jsmain.js"></script> -->
+<script type="module" src="jsmain.js"></script>
 <link rel="stylesheet" href="cssmain.css">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed|Literata" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -30,19 +28,21 @@
 <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin=""/> -->
-<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
 <!-- <script src="https://d3js.org/topojson.v1.min.js"></script> -->
-<!-- <script src="https://unpkg.com/deck.gl@7.0.9/dist/dist.dev.js"></script> -->
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+<script src="https://unpkg.com/deck.gl@7.0.9/dist/dist.dev.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <!-- <script src="res/jquery.waypoints.min.js"></script> -->
 <!-- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script> -->
 <link rel="stylesheet" href="../../res/flexboxgrid.min.css">
+<script src="../../res/appear.min.js"></script>
+
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script> -->
 
-
+    
 </head>
 
 <body>
@@ -77,15 +77,25 @@
                 </nav>
             </div>
         </div>
-        <div id="section-2" class="row center-lg center-md">
-            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
-                <img src="res/ls2014.jpg" style="width: 100%">
+        <div id="section-0" class="row center-lg center-md">
+            <div id='svg-div' class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                
+
             </div>
         </div>
+        <!-- <div id="section-1">
+            <div id="deck-map">
+                <canvas id="deck-canvas"></canvas>
+            </div>
+            
+        </div> -->
+        <!-- <div id="section-2">
+            <div id="leaflet-map"></div>
+        </div> -->
 
         <div class="row center-lg center-md" style="padding-top: 20px">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-            <div class="fb-like" data-href="https://numbersofindia.github.io/stories/ls2014/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            <div class="fb-like" data-href="https://numbersofindia.github.io/stories/women-in-parliament/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <form class="tinyletter-form" action="https://tinyletter.com/nuwandavek" method="post" target="popupwindow"
             onsubmit="window.open('https://tinyletter.com/nuwandavek', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
@@ -107,7 +117,7 @@
 </div>
 <div class="row center-lg center-md">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="fb-comments" data-href="https://numbersofindia.github.io/stories/ls2014/" data-width="" data-numposts="5"></div>
+                <div class="fb-comments" data-href="https://numbersofindia.github.io/stories/women-in-parliament/" data-width="" data-numposts="5"></div>
         </div>
 </div>
 
