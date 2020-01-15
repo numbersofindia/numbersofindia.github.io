@@ -1,5 +1,16 @@
 [
     {
+        "title": "Take a Deep Breath",
+        "description": "Relative desnities of particulate matter (PM2.5) in different cities of the world" ,
+        "link": "https://numbersofindia.com/stories/pm25/",
+        "img": "./res/imgs/pm25.png",
+        "tags": ["news","politics"],
+        "date": "Jan 2020",
+        "read_time": 3,
+        "story_type": "infographic",
+        "author": "Vivek Aithal"
+    },
+    {
         "title": "Women in Parliament",
         "description": "A brief peek into the number of women lawmakers in the Loksabha." ,
         "link": "https://numbersofindia.github.io/stories/women-in-parliament/",
