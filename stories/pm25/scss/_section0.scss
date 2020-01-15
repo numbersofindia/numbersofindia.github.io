@@ -1,22 +1,43 @@
 
+
+$break-small: 320px;
+$break-large: 1200px;
+
+
 #section-0{
     display: flex;
     justify-content: center;
     background: #333;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 #squares{
-    width: 900px;
-    margin-top: 20px;
+    
+    @media screen and (min-width: $break-small) {
+        
+        width: max-width;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 900px;
+    }
+
+    margin-top: 10px;
     margin-bottom: 20px;
 
 }
 
 #squares-month{
-    width: 900px;
-    margin-top: 20px;
+    @media screen and (min-width: $break-small) {
+        
+        width: max-width;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 900px;
+    }
+
+    margin-top: 10px;
     margin-bottom: 20px;
 
 }
@@ -39,7 +60,85 @@
 
 .head{
     color: #fff;
+    font-family: 'Roboto Condensed';
+    font-size: 20px;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+.head0{
+    color: #fff;
+    font-family: 'Josefin Sans';
+    font-size: 60px;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+.labels{
+    margin: 10px;
+    display: flex;
+    
+    @media screen and (min-width: $break-small) {
+        
+        flex-direction: column;
+    }
+    @media screen and (min-width: $break-large) {
+        flex-direction: row;
+    }
+
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+.blue{background: #27ae60;}
+.green{background: #f1c40f;}
+.yellow{background: #e67e22;}
+.orange{background: #e84118;}
+.red{background: #c23616;}
+.violet{background: #6F1E51;}
+
+.label{
+    border-radius: 5px;
+    margin: 2px !important;
+    padding: 5px !important;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-content: stretch;
+    justify-content: center;
+
+}
+
+#content{
+    color:#fff;
     font-family: 'Literata';
-    font-size: 30px;
-    margin-top: 20px;
+    @media screen and (min-width: $break-small) {
+        
+        width: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 60%;
+    }
+}
+
+.table{
+    text-align: center !important;
+    color : #fff;
+    margin-bottom: 20px;
+    font-family: 'Literata';
+}
+
+#scale-table{
+    
+    color : #fff;
+    margin-bottom: 30px;
+    @media screen and (min-width: $break-small) {
+        
+        width: 100%;
+    }
+    @media screen and (min-width: $break-large) {
+        width: 60%;
+    }
+
 }

@@ -2,18 +2,18 @@
 
 function section0() {
 
-    
+
 
     const canvasDims = 125;
-    const canvasDims2 = 55;
+    const canvasDims2 = 47;
 
     const pm25 = [
         ['good', 0, 12, 0, 50, '#27ae60'],
         ['moderate', 12, 35.5, 50, 100, '#f1c40f'],
         ['unhealthy for sensitive groups', 35.5, 55.5, 100, 150, '#e67e22'],
-        ['unhealthy', 55.5, 150.5, 150, 200, '#e74c3c'],
-        ['very unhealthy', 150.5, 250.5, 200, 300, '#c0392b'],
-        ['hazardous', 250.5, 500.5, 300, 500, '#8e44ad'],
+        ['unhealthy', 55.5, 150.5, 150, 200, '#e84118'],
+        ['very unhealthy', 150.5, 250.5, 200, 300, '#c23616'],
+        ['hazardous', 250.5, 500.5, 300, 500, '#6F1E51'],
     ];
 
 
@@ -138,9 +138,12 @@ function section0() {
             return cityOrder.indexOf(a.city) - cityOrder.indexOf(b.city);
         });
 
-        let totalAnimations = new Array(total).fill(0);
+        let totalAnimations = new Array(total.length).fill(0);
+        let monthAnimations = new Array(months.length).fill(0).map(() => new Array(12).fill(0));
 
-        // console.log(total);
+        // console.log(totalAnimations, monthAnimations);
+
+        cityOrder.forEach((d) => ($('#city-search').append(' <option value="' + d + '">' + d + '</option>')));
 
 
         d3.select('#squares').selectAll('g').data(total)
@@ -155,30 +158,6 @@ function section0() {
                 let level = calculateConcLevel(d.pm25);
                 return '3px solid ' + pm25[level][5];
             })
-        // .text(function(d){
-        //     return d.file;
-        // })
-
-        let monSq = d3.select("#squares-month").selectAll('div').data(months)
-                    .enter().append('div');
-
-        monSq.selectAll('canvas').data(function(d,i){
-            return new Array(13).fill(i)
-        }).enter().append('canvas')
-                    .attr('width', canvasDims2)
-                    .attr('height', canvasDims2)
-                    .attr('class', 'months')
-                    .attr('id', function (k, i) {
-                        return 'mon-' +k+'-'+ i;
-                    })
-                    .style('border', function (d, i) {
-                        // let level = calculateConcLevel(d.pm25);
-                        // return '3px solid ' + pm25[level][5];
-                        if(i>0){
-                            return '3px solid #fff';
-                        }
-                        else{return '1px solid #333'}
-                    })
 
 
 
@@ -222,57 +201,167 @@ function section0() {
             totalAnimations[j] = requestAnimationFrame(update);
         })
 
-        setTimeout(function(){
-            console.log('timed out');
-            totalAnimations.forEach((d)=>{
-                console.log(d);
-                cancelAnimationFrame(d);
-            });
-        },10000)
+        // setTimeout(function () {
+        //     console.log('timed out');
+        //     totalAnimations.forEach((d) => {
+        //         console.log(d);
+        //         cancelAnimationFrame(d);
+        //     });
+        // }, 10000)
+
+
+        $('#city-search')
+            .dropdown({
+                maxSelections: 3,
+                onChange: function (value, text, $selectedItem) {
+
+                    console.log(value);
+                    monthAnimations.forEach((d) => {
+                        d.forEach((k) => (cancelAnimationFrame(k)));
+                    })
+
+                    d3.selectAll('.month-divs').remove();
+
+                    value.forEach((p) => {
+                        let months_val = months.find((k) => k.city == p);
+                        d3.select("#squares-month").append('div').attr('class', 'month-divs').selectAll('canvas')
+                            .data(function (d, i) {
+                                return new Array(13).fill(0)
+                            }).enter().append('canvas')
+                            .attr('width', canvasDims2)
+                            .attr('height', canvasDims2)
+                            .attr('class', 'months')
+                            .attr('id', function (k, i) {
+                                return 'mon-' + p + '-' + i;
+                            })
+                            .style('border', function (d, i) {
+
+                                let level = calculateConcLevel(months_val[monthsOfYear[i - 1]]);
+
+                                if (i > 0) {
+                                    return '2px solid ' + pm25[level][5];
+                                }
+                                else { return '2px solid #fff' }
+                            })
+
+                        new Array(12).fill(0).forEach((q, k) => {
+                            var canvas = document.getElementById('mon-' + p + '-' + (k + 1));
+                            canvas.width = canvasDims2;
+                            canvas.height = canvasDims2;
+                            var ctx = canvas.getContext('2d');
+                            var circles = [];
+                            let monthOfYear = monthsOfYear[k]
+
+                            let conc = Math.floor(calculateConc(months_val[monthOfYear]));
+                            let x_speed_seed = 2;
+                            let y_speed_seed = 2;
+
+                            for (var i = 0; i < conc; i++) {
+                                var _x = Math.random() * canvas.width,
+                                    _y = Math.random() * canvas.height,
+                                    xspd = Math.random() * x_speed_seed,
+                                    yspd = Math.random() * y_speed_seed,
+                                    radius = 1,
+                                    c = new Circle(_x, _y, radius, xspd, yspd, canvas, ctx);
+                                circles.push(c);
+                            }
+                            function update() {
+                                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                                ctx.font = "15px Josefin Sans";
+                                ctx.fillStyle = "#fff";
+                                ctx.textAlign = "center";
+                                ctx.fillText(monthOfYear, canvas.width / 2, canvas.height / 2 + 5);
+
+                                for (var i = 0; i < circles.length; i++) {
+                                    circles[i].drawCircle();
+                                    circles[i].moveCircle();
+                                }
+                                // console.log('city order ',cityOrder.indexOf(p));
+                                monthAnimations[cityOrder.indexOf(p)][k] = requestAnimationFrame(update);
+                            }
+                            monthAnimations[cityOrder.indexOf(p)][k] = requestAnimationFrame(update);
+                        });
+
+                        // console.log(monthAnimations);
+
+                        var canvas = document.getElementById('mon-' + p + '-0');
+                        canvas.width = canvasDims2;
+                        canvas.height = canvasDims2;
+                        var ctx = canvas.getContext('2d');
+                        ctx.font = "10px Josefin Sans";
+                        ctx.fillStyle = "#fff";
+                        ctx.textAlign = "center";
+                        ctx.fillText(p, canvas.width / 2, canvas.height / 2 + 5);
 
 
 
 
 
-        months.forEach((d, j) => {
-            new Array(12).fill(0).forEach((p,k)=>{
-                var canvas = document.getElementById('mon-' + j + '-' + (k+1));
-                canvas.width = canvasDims2;
-                canvas.height = canvasDims2;
-                var ctx = canvas.getContext('2d');
-                var circles = [];
-                let monthOfYear = monthsOfYear[k]
-
-                let conc = Math.floor(calculateConc(d[monthOfYear]));
-                let x_speed_seed = 2;
-                let y_speed_seed = 2;
-
-                for (var i = 0; i < conc; i++) {
-                    var _x = Math.random() * canvas.width,
-                        _y = Math.random() * canvas.height,
-                        xspd = Math.random() * x_speed_seed,
-                        yspd = Math.random() * y_speed_seed,
-                        radius = 1,
-                        c = new Circle(_x, _y, radius, xspd, yspd, canvas, ctx);
-                    circles.push(c);
+                    });
                 }
-                function update() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    // ctx.font = "15px Josefin Sans";
-                    // ctx.fillStyle = "#fff";
-                    // ctx.textAlign = "center";
-                    // ctx.fillText(d.city, canvas.width / 2, canvas.height / 2 + 5);
-
-                    for (var i = 0; i < circles.length; i++) {
-                        circles[i].drawCircle();
-                        circles[i].moveCircle();
-                    }
-                    requestAnimationFrame(update);
-                }
-                update();
             });
 
-        });
+        $('#city-search').dropdown('set selected', ['new-delhi', 'new-york']);
+
+
+        //   setTimeout(function () {
+        //     console.log('timed out');
+        //     totalAnimations.forEach((d) => {
+        //         // console.log(d);
+        //         cancelAnimationFrame(d);
+        //     });
+        // }, 10000)
+
+        //   setTimeout(function () {
+        //     console.log('timed out');
+        //     monthAnimations.forEach((d) => {
+        //         // console.log(d);
+        //         d.forEach((p) => {cancelAnimationFrame(p)});
+        //     });
+        // }, 5000)
+
+
+
+
+        // months.forEach((d, j) => {
+        //     new Array(12).fill(0).forEach((p,k)=>{
+        //         var canvas = document.getElementById('mon-' + j + '-' + (k+1));
+        //         canvas.width = canvasDims2;
+        //         canvas.height = canvasDims2;
+        //         var ctx = canvas.getContext('2d');
+        //         var circles = [];
+        //         let monthOfYear = monthsOfYear[k]
+
+        //         let conc = Math.floor(calculateConc(d[monthOfYear]));
+        //         let x_speed_seed = 2;
+        //         let y_speed_seed = 2;
+
+        //         for (var i = 0; i < conc; i++) {
+        //             var _x = Math.random() * canvas.width,
+        //                 _y = Math.random() * canvas.height,
+        //                 xspd = Math.random() * x_speed_seed,
+        //                 yspd = Math.random() * y_speed_seed,
+        //                 radius = 1,
+        //                 c = new Circle(_x, _y, radius, xspd, yspd, canvas, ctx);
+        //             circles.push(c);
+        //         }
+        //         function update() {
+        //             ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //             // ctx.font = "15px Josefin Sans";
+        //             // ctx.fillStyle = "#fff";
+        //             // ctx.textAlign = "center";
+        //             // ctx.fillText(d.city, canvas.width / 2, canvas.height / 2 + 5);
+
+        //             for (var i = 0; i < circles.length; i++) {
+        //                 circles[i].drawCircle();
+        //                 circles[i].moveCircle();
+        //             }
+        //             requestAnimationFrame(update);
+        //         }
+        //         update();
+        //     });
+
+        // });
 
 
     })

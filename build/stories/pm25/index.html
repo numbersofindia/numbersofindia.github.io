@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>template</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta property="og:url" content="" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="" />
-    <meta property="og:description"
-        content="" />
-    <meta property="og:image" content="" />
-    <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59236300-6"></script>
+    <head>
+        <title>Take a Deep Breath</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta property="og:url" content="https://numbersofindia.com/stories/pm25/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Take a Deep Breath" />
+        <meta property="og:description" content="Relative desnities of particulate matter in different
+        cities of the world"/>
+        <meta property="og:image" content="../../res/imgs/pm25.png" />
+        <meta charset="UTF-8">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-59236300-6"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -20,7 +20,7 @@
         gtag('config', 'UA-59236300-6');
     </script>
 
-    <link rel="icon" href="../../res/imgs/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="../../res/imgs/favicon.ico" type="image/x-icon" />
 <script type="module" src="jsmain.js"></script>
 <link rel="stylesheet" href="cssmain.css">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto+Condensed|Literata" rel="stylesheet">
@@ -43,17 +43,17 @@
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script> -->
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
-    
-</head>
 
-<body>
-    <div id="fb-root"></div>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
         src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3&appId=300936        117042821&autoLogAppEvents=1"></script>
-    <div id="main">
+        <div id="main">
             <div id="navbar">
             <div style="justify-content: center; display: flex; flex-direction: column"><a href="/"><img
                         src="../../res/imgs/noi_nav.png" class='logo-img'></div></a>
@@ -81,24 +81,116 @@
                 </nav>
             </div>
         </div>
-        <div id="section-0">
-            <p class='head'>Average Annual PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
-            <div id="squares"></div>
-            <p class='head'>Average Month-wise PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
-            <div id="squares-month"></div>
-            
-        </div>
-        <!-- <div id="section-1">
+            <div id="section-0">
+                    <p class='head0'>TAKE A <span style="color:#e8442e">DEEP</span> BREATH</p>
+                    <p class='head'>Average Annual PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
+                <div class='labels'>
+                    <p class="blue label">Good</p>
+                    <p class="green label">Moderate</p>
+                    <p class="yellow label">Unhealthy for Sensitive Groups</p>
+                    <p class="orange label">Unhealthy</p>
+                    <p class="red label">Very Unhealthy</p>
+                    <p class="violet label">Hazardous</p>
+                </div>
+                <div id="squares"></div>
+                <p class='head'>Average Month-wise PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
+                <select class="ui search dropdown" multiple="" id='city-search'>
+                </select>
+                <div id="squares-month"></div>
+                <div class='labels'>
+                    <p class="blue label">Good</p>
+                    <p class="green label">Moderate</p>
+                    <p class="yellow label">Unhealthy for Sensitive Groups</p>
+                    <p class="orange label">Unhealthy</p>
+                    <p class="red label">Very Unhealthy</p>
+                    <p class="violet label">Hazardous</p>
+                </div>
+
+                <div id='scale-table'>
+                    <table class="ui celled table unstackable">
+                        <thead>
+                            <tr>
+                                <th>AQI</th>
+                                <th>Air Pollution Level</th>
+                                <th>Health Implications</th>
+                                <th>Cautionary Statement (for PM2.5)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="blue">
+                                <td data-label="A">0 - 50</td>
+                                <td data-label="B">Good</td>
+                                <td data-label="C">Air quality is considered satisfactory, and air pollution poses little or no risk</td>
+                                <td data-label="D">-</td>
+                            </tr>
+                            
+                            <tr class='green'>
+                                    <td data-label="A">51 - 100</td>
+                                    <td data-label="B">Moderate</td>
+                                    <td data-label="C">Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                                    <td data-label="D">Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.</td>
+                                </tr>
+
+
+                            <tr class='yellow'>
+                                    <td data-label="A">101 - 150</td>
+                                    <td data-label="B">Unhealthy for Sensitive Groups</td>
+                                    <td data-label="C">Members of sensitive groups may experience health effects. The general public is not likely to be affected.	</td>
+                                    <td data-label="D">Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.
+                                        </td>
+                                </tr>
+
+
+                            <tr class='orange'>
+                                    <td data-label="A">151 - 200</td>
+                                    <td data-label="B">Unhealthy</td>
+                                    <td data-label="C">Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects	</td>
+                                    <td data-label="D">Active children and adults, and people with respiratory disease, such as asthma, should avoid prolonged outdoor exertion; everyone else, especially children, should limit prolonged outdoor exertion
+                                        </td>
+                                </tr>
+
+
+                            <tr class='red'>
+                                    <td data-label="A">201 - 300</td>
+                                    <td data-label="B">Very Unhealthy</td>
+                                    <td data-label="C">Health warnings of emergency conditions. The entire population is more likely to be affected.</td>
+                                    <td data-label="D">Active children and adults, and people with respiratory disease, such as asthma, should avoid all outdoor exertion; everyone else, especially children, should limit outdoor exertion.
+                                        </td>
+                                </tr>
+
+
+                            <tr class='violet'>
+                                    <td data-label="A">300+</td>
+                                    <td data-label="B">Hazardous</td>
+                                    <td data-label="C">Health alert: everyone may experience more serious health effects</td>
+                                    <td data-label="D">Everyone should avoid all outdoor exertion
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id='content'>
+                    <p>Disclaimer : This viz is for comparision only. There are many nuances that have been (deliberately) overlooked.</p>
+                    <p>Particulate Matter 2.5 (PM2.5) is one of the worst pollutants in the atmosphere. The motivation
+                        for this visualization is to understand relative desnities of particulate matter in different
+                        cities of the world. I was inspired by this <a href='https://www.nytimes.com/interactive/2019/12/02/climate/air-pollution-compare-ar-ul.html'>New
+                            York Times</a> article. All data is from <a href='http://aqicn.org/'>World Air Quality
+                            Index Project</a>. Check <a href='http://aqicn.org/scale/'>this</a> out to understand the
+                        AQI scale and its health implications better</p>
+                </div>
+            </div>
+            <!-- <div id="section-1">
             <div id="deck-map">
                 <canvas id="deck-canvas"></canvas>
             </div>
             
         </div> -->
-        <!-- <div id="section-2">
+            <!-- <div id="section-2">
             <div id="leaflet-map"></div>
         </div> -->
 
-        <div class="row center-lg center-md" style="padding-top: 20px">
+            <div class="row center-lg center-md" style="padding-top: 20px">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div class="fb-like" data-href="https://numbersofindia.github.io/stories/pm25/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -126,7 +218,7 @@
         </div>
 </div>
 
-        <div id='footer' class="row">
+            <div id='footer' class="row">
         <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 footer-div">
             <p class="poem">Do you have a project/idea you wish to discuss?<br>
                 I'd love to speak with you.<br>
@@ -189,7 +281,7 @@
 
     </div>
 
-    </div>
-</body>
+        </div>
+    </body>
 
 </html>
