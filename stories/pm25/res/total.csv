@@ -1,0 +1,31 @@
+file,city,pm25
+amsterdam-air-quality.csv,amsterdam,60.160575858250276
+"beijing-us embassy, beijing-air-quality.csv",beijing,100.7135761589404
+"btm,-bangalore, india-air-quality.csv",bangalore,91.96119402985074
+"cape-point, cape town metro, south africa-air-quality.csv",cape town,26.1792656587473
+"central,-singapore-air-quality.csv",singapore,52.42167577413479
+"chennai-us consulate, chennai, india-air-quality.csv",chennai,82.18237704918033
+"dhaka-us consulate, bangladesh-air-quality.csv",dhaka,151.11581067472306
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",johannesburg,78.90088105726872
+"dubai-us embassy, uae-air-quality.csv",dubai,122.18290598290598
+hong-kong-air-quality.csv,hong-kong,75.04995458673933
+"hyderabad-us consulate, india-air-quality.csv",hyderabad,119.9465186680121
+"istanbul-kagithane, turkey-air-quality.csv",istanbul,78.33460803059273
+"itaim-paulista, são paulo, brazil-air-quality.csv",são paulo,57.43189368770764
+"jakarta-central (us consulate), indonesia-air-quality.csv",jakarta,95.47838616714698
+"kolkata-us consulate, india-air-quality.csv",kolkata,138.04386839481555
+"london-westminster, united kingdom-air-quality.csv",london,43.8792270531401
+los-angeles-north main street-air-quality.csv,los-angeles,53.313653136531364
+madrid-air-quality.csv,madrid,52.78051001821493
+"mumbai-us consulate, india-air-quality.csv",mumbai,118.69948186528498
+"nagaoka,-tokyo, japan-air-quality.csv",tokyo,46.089416058394164
+"nairobi-alliance girls high school, kenya-air-quality.csv",nairobi,30.630769230769232
+"new-delhi us embassy, india-air-quality.csv",new-delhi,165.51668351870578
+"new-york, usa-air-quality.csv",new-york,37.192727272727275
+paris-air-quality.csv,paris,63.2851282051282
+"penrose,-auckland, new zealand-air-quality.csv",auckland,39.24278215223097
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",san-francisco,36.40166204986149
+"shanghai-us consulate, shanghai-air-quality.csv",shanghai,100.1858108108108
+"suhar,-moscow, moscow, russia-air-quality.csv",moscow,53.28007518796993
+toronto-air-quality.csv,toronto,37.63148316651501
+"us-consulate, bogota, colombia-air-quality.csv",bogota,47.128412537917086
