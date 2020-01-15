@@ -1,0 +1,45 @@
+
+#section-0{
+    display: flex;
+    justify-content: center;
+    background: #333;
+    flex-direction: column;
+    align-items: center;
+}
+
+#squares{
+    width: 900px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+#squares-month{
+    width: 900px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+// #squares>canvas{
+//     border-radius: 5px;
+// }
+
+.cities{
+    margin-left:5px;
+    backkground: #333;
+    border-radius: 5px;
+}
+.months{
+    margin-left:5px;
+    backkground: #333;
+    border-radius: 5px;
+}
+
+
+.head{
+    color: #fff;
+    font-family: 'Literata';
+    font-size: 30px;
+    margin-top: 20px;
+}

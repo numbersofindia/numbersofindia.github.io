@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>template</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description"
+        content="" />
+    <meta property="og:image" content="" />
+    <meta charset="UTF-8">
+    {% include "ga.html" %}
+
+    {% include "imports_big.html" %}
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+    
+</head>
+
+<body>
+    {% include "fb.html" %}
+    <div id="main">
+            {% include "navbar.html" %}
+        <div id="section-0">
+            <p class='head'>Average Annual PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
+            <div id="squares"></div>
+            <p class='head'>Average Month-wise PM-2.5 Concentration (μg/m<sup>3</sup>)</p>
+            <div id="squares-month"></div>
+            
+        </div>
+        <!-- <div id="section-1">
+            <div id="deck-map">
+                <canvas id="deck-canvas"></canvas>
+            </div>
+            
+        </div> -->
+        <!-- <div id="section-2">
+            <div id="leaflet-map"></div>
+        </div> -->
+
+        {% include "sharing.html" %}
+        {% include "footer.html" %}
+
+    </div>
+</body>
+
+</html>

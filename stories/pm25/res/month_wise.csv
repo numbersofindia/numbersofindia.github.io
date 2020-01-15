@@ -1,0 +1,361 @@
+file,month,city,pm25
+amsterdam-air-quality.csv,1,amsterdam,63.41237113402062
+amsterdam-air-quality.csv,2,amsterdam,78.73809523809524
+amsterdam-air-quality.csv,3,amsterdam,66.93548387096774
+amsterdam-air-quality.csv,4,amsterdam,67.58888888888889
+amsterdam-air-quality.csv,5,amsterdam,63.12903225806452
+amsterdam-air-quality.csv,6,amsterdam,56.8125
+amsterdam-air-quality.csv,7,amsterdam,51.74193548387097
+amsterdam-air-quality.csv,8,amsterdam,49.54838709677419
+amsterdam-air-quality.csv,9,amsterdam,44.1
+amsterdam-air-quality.csv,10,amsterdam,48.274193548387096
+amsterdam-air-quality.csv,11,amsterdam,62.85
+amsterdam-air-quality.csv,12,amsterdam,52.43333333333333
+"beijing-us embassy, beijing-air-quality.csv",1,beijing,102.69767441860465
+"beijing-us embassy, beijing-air-quality.csv",2,beijing,111.28571428571429
+"beijing-us embassy, beijing-air-quality.csv",3,beijing,106.64516129032258
+"beijing-us embassy, beijing-air-quality.csv",4,beijing,113.83333333333333
+"beijing-us embassy, beijing-air-quality.csv",5,beijing,118.97826086956522
+"beijing-us embassy, beijing-air-quality.csv",6,beijing,108.81666666666666
+"beijing-us embassy, beijing-air-quality.csv",7,beijing,94.59016393442623
+"beijing-us embassy, beijing-air-quality.csv",8,beijing,75.29032258064517
+"beijing-us embassy, beijing-air-quality.csv",9,beijing,82.45
+"beijing-us embassy, beijing-air-quality.csv",10,beijing,96.59677419354838
+"beijing-us embassy, beijing-air-quality.csv",11,beijing,119.03333333333333
+"beijing-us embassy, beijing-air-quality.csv",12,beijing,99.34426229508196
+"btm,-bangalore, india-air-quality.csv",1,bangalore,109.16346153846153
+"btm,-bangalore, india-air-quality.csv",2,bangalore,104.11904761904762
+"btm,-bangalore, india-air-quality.csv",3,bangalore,109.06976744186046
+"btm,-bangalore, india-air-quality.csv",4,bangalore,129.77272727272728
+"btm,-bangalore, india-air-quality.csv",5,bangalore,108.98876404494382
+"btm,-bangalore, india-air-quality.csv",6,bangalore,73.95454545454545
+"btm,-bangalore, india-air-quality.csv",7,bangalore,65.03225806451613
+"btm,-bangalore, india-air-quality.csv",8,bangalore,58.67777777777778
+"btm,-bangalore, india-air-quality.csv",9,bangalore,63.46341463414634
+"btm,-bangalore, india-air-quality.csv",10,bangalore,75.35
+"btm,-bangalore, india-air-quality.csv",11,bangalore,111.87692307692308
+"btm,-bangalore, india-air-quality.csv",12,bangalore,106.87179487179488
+"cape-point, cape town metro, south africa-air-quality.csv",1,cape town,32.75
+"cape-point, cape town metro, south africa-air-quality.csv",2,cape town,15.44
+"cape-point, cape town metro, south africa-air-quality.csv",3,cape town,12.064516129032258
+"cape-point, cape town metro, south africa-air-quality.csv",4,cape town,14.733333333333333
+"cape-point, cape town metro, south africa-air-quality.csv",5,cape town,16.612903225806452
+"cape-point, cape town metro, south africa-air-quality.csv",6,cape town,17.533333333333335
+"cape-point, cape town metro, south africa-air-quality.csv",7,cape town,15.096774193548388
+"cape-point, cape town metro, south africa-air-quality.csv",8,cape town,32.285714285714285
+"cape-point, cape town metro, south africa-air-quality.csv",9,cape town,93.05405405405405
+"cape-point, cape town metro, south africa-air-quality.csv",10,cape town,20.82456140350877
+"cape-point, cape town metro, south africa-air-quality.csv",11,cape town,20.066666666666666
+"cape-point, cape town metro, south africa-air-quality.csv",12,cape town,20.285714285714285
+"central,-singapore-air-quality.csv",1,singapore,41.74757281553398
+"central,-singapore-air-quality.csv",2,singapore,51.142857142857146
+"central,-singapore-air-quality.csv",3,singapore,53.98913043478261
+"central,-singapore-air-quality.csv",4,singapore,55.146067415730336
+"central,-singapore-air-quality.csv",5,singapore,50.473118279569896
+"central,-singapore-air-quality.csv",6,singapore,46.65555555555556
+"central,-singapore-air-quality.csv",7,singapore,50.096774193548384
+"central,-singapore-air-quality.csv",8,singapore,56.645161290322584
+"central,-singapore-air-quality.csv",9,singapore,71.16279069767442
+"central,-singapore-air-quality.csv",10,singapore,59.483870967741936
+"central,-singapore-air-quality.csv",11,singapore,51.03333333333333
+"central,-singapore-air-quality.csv",12,singapore,43.72826086956522
+"chennai-us consulate, chennai, india-air-quality.csv",1,chennai,129.49514563106797
+"chennai-us consulate, chennai, india-air-quality.csv",2,chennai,106.21428571428571
+"chennai-us consulate, chennai, india-air-quality.csv",3,chennai,67.40217391304348
+"chennai-us consulate, chennai, india-air-quality.csv",4,chennai,58.577777777777776
+"chennai-us consulate, chennai, india-air-quality.csv",5,chennai,68.83695652173913
+"chennai-us consulate, chennai, india-air-quality.csv",6,chennai,70.58426966292134
+"chennai-us consulate, chennai, india-air-quality.csv",7,chennai,75.55434782608695
+"chennai-us consulate, chennai, india-air-quality.csv",8,chennai,67.48913043478261
+"chennai-us consulate, chennai, india-air-quality.csv",9,chennai,66.02352941176471
+"chennai-us consulate, chennai, india-air-quality.csv",10,chennai,74.36363636363636
+"chennai-us consulate, chennai, india-air-quality.csv",11,chennai,107.625
+"chennai-us consulate, chennai, india-air-quality.csv",12,chennai,113.41791044776119
+"dhaka-us consulate, bangladesh-air-quality.csv",1,dhaka,243.31
+"dhaka-us consulate, bangladesh-air-quality.csv",2,dhaka,222.34939759036143
+"dhaka-us consulate, bangladesh-air-quality.csv",3,dhaka,181.2688172043011
+"dhaka-us consulate, bangladesh-air-quality.csv",4,dhaka,141.46666666666667
+"dhaka-us consulate, bangladesh-air-quality.csv",5,dhaka,120.74725274725274
+"dhaka-us consulate, bangladesh-air-quality.csv",6,dhaka,91.98876404494382
+"dhaka-us consulate, bangladesh-air-quality.csv",7,dhaka,85.74193548387096
+"dhaka-us consulate, bangladesh-air-quality.csv",8,dhaka,88.95
+"dhaka-us consulate, bangladesh-air-quality.csv",9,dhaka,98.52727272727273
+"dhaka-us consulate, bangladesh-air-quality.csv",10,dhaka,122.55737704918033
+"dhaka-us consulate, bangladesh-air-quality.csv",11,dhaka,177.67105263157896
+"dhaka-us consulate, bangladesh-air-quality.csv",12,dhaka,207.5487804878049
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",1,johannesburg,84.3
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",2,johannesburg,87.56
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",3,johannesburg,70.51612903225806
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",4,johannesburg,67.5625
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",5,johannesburg,86.13636363636364
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",6,johannesburg,90.93333333333334
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",7,johannesburg,85.96774193548387
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",8,johannesburg,82.34285714285714
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",9,johannesburg,82.13333333333334
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",10,johannesburg,72.45161290322581
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",11,johannesburg,67.79661016949153
+"diepkloof,-johannesburg metro, south africa-air-quality.csv",12,johannesburg,80.11320754716981
+"dubai-us embassy, uae-air-quality.csv",1,dubai,88.4
+"dubai-us embassy, uae-air-quality.csv",2,dubai,122.03571428571429
+"dubai-us embassy, uae-air-quality.csv",3,dubai,110.6
+"dubai-us embassy, uae-air-quality.csv",4,dubai,122.14
+"dubai-us embassy, uae-air-quality.csv",5,dubai,135.2982456140351
+"dubai-us embassy, uae-air-quality.csv",6,dubai,142.44230769230768
+"dubai-us embassy, uae-air-quality.csv",7,dubai,148.54237288135593
+"dubai-us embassy, uae-air-quality.csv",8,dubai,148.46774193548387
+"dubai-us embassy, uae-air-quality.csv",9,dubai,135.89830508474577
+"dubai-us embassy, uae-air-quality.csv",10,dubai,118.41304347826087
+"dubai-us embassy, uae-air-quality.csv",11,dubai,71.81132075471699
+"dubai-us embassy, uae-air-quality.csv",12,dubai,81.7948717948718
+hong-kong-air-quality.csv,1,hong-kong,92.77884615384616
+hong-kong-air-quality.csv,2,hong-kong,85.94047619047619
+hong-kong-air-quality.csv,3,hong-kong,85.83870967741936
+hong-kong-air-quality.csv,4,hong-kong,77.6
+hong-kong-air-quality.csv,5,hong-kong,66.33333333333333
+hong-kong-air-quality.csv,6,hong-kong,50.55555555555556
+hong-kong-air-quality.csv,7,hong-kong,49.38709677419355
+hong-kong-air-quality.csv,8,hong-kong,60.236559139784944
+hong-kong-air-quality.csv,9,hong-kong,72.79069767441861
+hong-kong-air-quality.csv,10,hong-kong,81.96774193548387
+hong-kong-air-quality.csv,11,hong-kong,84.37777777777778
+hong-kong-air-quality.csv,12,hong-kong,91.34782608695652
+"hyderabad-us consulate, india-air-quality.csv",1,hyderabad,162.86274509803923
+"hyderabad-us consulate, india-air-quality.csv",2,hyderabad,149.275
+"hyderabad-us consulate, india-air-quality.csv",3,hyderabad,136.46236559139786
+"hyderabad-us consulate, india-air-quality.csv",4,hyderabad,129.7888888888889
+"hyderabad-us consulate, india-air-quality.csv",5,hyderabad,125.61797752808988
+"hyderabad-us consulate, india-air-quality.csv",6,hyderabad,86.02666666666667
+"hyderabad-us consulate, india-air-quality.csv",7,hyderabad,71.58241758241758
+"hyderabad-us consulate, india-air-quality.csv",8,hyderabad,69.22988505747126
+"hyderabad-us consulate, india-air-quality.csv",9,hyderabad,82.46268656716418
+"hyderabad-us consulate, india-air-quality.csv",10,hyderabad,127.17391304347827
+"hyderabad-us consulate, india-air-quality.csv",11,hyderabad,137.56603773584905
+"hyderabad-us consulate, india-air-quality.csv",12,hyderabad,156.33333333333334
+"istanbul-kagithane, turkey-air-quality.csv",1,istanbul,84.35051546391753
+"istanbul-kagithane, turkey-air-quality.csv",2,istanbul,87.28915662650603
+"istanbul-kagithane, turkey-air-quality.csv",3,istanbul,96.30434782608695
+"istanbul-kagithane, turkey-air-quality.csv",4,istanbul,86.83333333333333
+"istanbul-kagithane, turkey-air-quality.csv",5,istanbul,76.04301075268818
+"istanbul-kagithane, turkey-air-quality.csv",6,istanbul,67.73255813953489
+"istanbul-kagithane, turkey-air-quality.csv",7,istanbul,65.94565217391305
+"istanbul-kagithane, turkey-air-quality.csv",8,istanbul,57.24731182795699
+"istanbul-kagithane, turkey-air-quality.csv",9,istanbul,65.01639344262296
+"istanbul-kagithane, turkey-air-quality.csv",10,istanbul,82.49425287356321
+"istanbul-kagithane, turkey-air-quality.csv",11,istanbul,85.41666666666667
+"istanbul-kagithane, turkey-air-quality.csv",12,istanbul,82.1590909090909
+"itaim-paulista, são paulo, brazil-air-quality.csv",1,são paulo,46.6875
+"itaim-paulista, são paulo, brazil-air-quality.csv",2,são paulo,49.476190476190474
+"itaim-paulista, são paulo, brazil-air-quality.csv",3,são paulo,46.83132530120482
+"itaim-paulista, são paulo, brazil-air-quality.csv",4,são paulo,51.922222222222224
+"itaim-paulista, são paulo, brazil-air-quality.csv",5,são paulo,61.146341463414636
+"itaim-paulista, são paulo, brazil-air-quality.csv",6,são paulo,70.73684210526316
+"itaim-paulista, são paulo, brazil-air-quality.csv",7,são paulo,81.42696629213484
+"itaim-paulista, são paulo, brazil-air-quality.csv",8,são paulo,61.16279069767442
+"itaim-paulista, são paulo, brazil-air-quality.csv",9,são paulo,71.8433734939759
+"itaim-paulista, são paulo, brazil-air-quality.csv",10,são paulo,53.142857142857146
+"itaim-paulista, são paulo, brazil-air-quality.csv",11,são paulo,40.77272727272727
+"itaim-paulista, são paulo, brazil-air-quality.csv",12,são paulo,46.610169491525426
+"jakarta-central (us consulate), indonesia-air-quality.csv",1,jakarta,63.58
+"jakarta-central (us consulate), indonesia-air-quality.csv",2,jakarta,79.72619047619048
+"jakarta-central (us consulate), indonesia-air-quality.csv",3,jakarta,74.74157303370787
+"jakarta-central (us consulate), indonesia-air-quality.csv",4,jakarta,88.625
+"jakarta-central (us consulate), indonesia-air-quality.csv",5,jakarta,109.32954545454545
+"jakarta-central (us consulate), indonesia-air-quality.csv",6,jakarta,108.12359550561797
+"jakarta-central (us consulate), indonesia-air-quality.csv",7,jakarta,118.51612903225806
+"jakarta-central (us consulate), indonesia-air-quality.csv",8,jakarta,108.97849462365592
+"jakarta-central (us consulate), indonesia-air-quality.csv",9,jakarta,107.38271604938272
+"jakarta-central (us consulate), indonesia-air-quality.csv",10,jakarta,108.19753086419753
+"jakarta-central (us consulate), indonesia-air-quality.csv",11,jakarta,100.58904109589041
+"jakarta-central (us consulate), indonesia-air-quality.csv",12,jakarta,81.47560975609755
+"kolkata-us consulate, india-air-quality.csv",1,kolkata,247.75
+"kolkata-us consulate, india-air-quality.csv",2,kolkata,193.90123456790124
+"kolkata-us consulate, india-air-quality.csv",3,kolkata,152.2258064516129
+"kolkata-us consulate, india-air-quality.csv",4,kolkata,112.26966292134831
+"kolkata-us consulate, india-air-quality.csv",5,kolkata,101.06666666666666
+"kolkata-us consulate, india-air-quality.csv",6,kolkata,87.71264367816092
+"kolkata-us consulate, india-air-quality.csv",7,kolkata,80.38095238095238
+"kolkata-us consulate, india-air-quality.csv",8,kolkata,79.94623655913979
+"kolkata-us consulate, india-air-quality.csv",9,kolkata,87.45121951219512
+"kolkata-us consulate, india-air-quality.csv",10,kolkata,124.52873563218391
+"kolkata-us consulate, india-air-quality.csv",11,kolkata,204.14634146341464
+"kolkata-us consulate, india-air-quality.csv",12,kolkata,215.94444444444446
+"london-westminster, united kingdom-air-quality.csv",1,london,44.13953488372093
+"london-westminster, united kingdom-air-quality.csv",2,london,62.57692307692308
+"london-westminster, united kingdom-air-quality.csv",3,london,41.96774193548387
+"london-westminster, united kingdom-air-quality.csv",4,london,62.20454545454545
+"london-westminster, united kingdom-air-quality.csv",5,london,46.83870967741935
+"london-westminster, united kingdom-air-quality.csv",6,london,36.228070175438596
+"london-westminster, united kingdom-air-quality.csv",7,london,37.93333333333333
+"london-westminster, united kingdom-air-quality.csv",8,london,40.54385964912281
+"london-westminster, united kingdom-air-quality.csv",9,london,36.271186440677965
+"london-westminster, united kingdom-air-quality.csv",10,london,39.08064516129032
+"london-westminster, united kingdom-air-quality.csv",11,london,50.233333333333334
+"london-westminster, united kingdom-air-quality.csv",12,london,42.55
+los-angeles-north main street-air-quality.csv,1,los-angeles,50.66
+los-angeles-north main street-air-quality.csv,2,los-angeles,41.83132530120482
+los-angeles-north main street-air-quality.csv,3,los-angeles,44.82795698924731
+los-angeles-north main street-air-quality.csv,4,los-angeles,50.04494382022472
+los-angeles-north main street-air-quality.csv,5,los-angeles,49.086021505376344
+los-angeles-north main street-air-quality.csv,6,los-angeles,59.654761904761905
+los-angeles-north main street-air-quality.csv,7,los-angeles,61.236559139784944
+los-angeles-north main street-air-quality.csv,8,los-angeles,61.666666666666664
+los-angeles-north main street-air-quality.csv,9,los-angeles,57.073170731707314
+los-angeles-north main street-air-quality.csv,10,los-angeles,56.38709677419355
+los-angeles-north main street-air-quality.csv,11,los-angeles,55.455555555555556
+los-angeles-north main street-air-quality.csv,12,los-angeles,51.75824175824176
+madrid-air-quality.csv,1,madrid,60.98039215686274
+madrid-air-quality.csv,2,madrid,54.36904761904762
+madrid-air-quality.csv,3,madrid,45.54838709677419
+madrid-air-quality.csv,4,madrid,39.666666666666664
+madrid-air-quality.csv,5,madrid,40.27956989247312
+madrid-air-quality.csv,6,madrid,52.37777777777778
+madrid-air-quality.csv,7,madrid,56.27956989247312
+madrid-air-quality.csv,8,madrid,61.72043010752688
+madrid-air-quality.csv,9,madrid,59.54651162790697
+madrid-air-quality.csv,10,madrid,51.193548387096776
+madrid-air-quality.csv,11,madrid,48.022222222222226
+madrid-air-quality.csv,12,madrid,62.879120879120876
+"mumbai-us consulate, india-air-quality.csv",1,mumbai,180.50515463917526
+"mumbai-us consulate, india-air-quality.csv",2,mumbai,167.61904761904762
+"mumbai-us consulate, india-air-quality.csv",3,mumbai,144.65591397849462
+"mumbai-us consulate, india-air-quality.csv",4,mumbai,102.48275862068965
+"mumbai-us consulate, india-air-quality.csv",5,mumbai,79.32
+"mumbai-us consulate, india-air-quality.csv",6,mumbai,64.88888888888889
+"mumbai-us consulate, india-air-quality.csv",7,mumbai,83.32608695652173
+"mumbai-us consulate, india-air-quality.csv",8,mumbai,77.85555555555555
+"mumbai-us consulate, india-air-quality.csv",9,mumbai,69.01724137931035
+"mumbai-us consulate, india-air-quality.csv",10,mumbai,130.90243902439025
+"mumbai-us consulate, india-air-quality.csv",11,mumbai,149.08928571428572
+"mumbai-us consulate, india-air-quality.csv",12,mumbai,166.04285714285714
+"nagaoka,-tokyo, japan-air-quality.csv",1,tokyo,41.03846153846154
+"nagaoka,-tokyo, japan-air-quality.csv",2,tokyo,48.25
+"nagaoka,-tokyo, japan-air-quality.csv",3,tokyo,53.473118279569896
+"nagaoka,-tokyo, japan-air-quality.csv",4,tokyo,52.93333333333333
+"nagaoka,-tokyo, japan-air-quality.csv",5,tokyo,51.78888888888889
+"nagaoka,-tokyo, japan-air-quality.csv",6,tokyo,45.98888888888889
+"nagaoka,-tokyo, japan-air-quality.csv",7,tokyo,47.10752688172043
+"nagaoka,-tokyo, japan-air-quality.csv",8,tokyo,46.98924731182796
+"nagaoka,-tokyo, japan-air-quality.csv",9,tokyo,40.23255813953488
+"nagaoka,-tokyo, japan-air-quality.csv",10,tokyo,39.582417582417584
+"nagaoka,-tokyo, japan-air-quality.csv",11,tokyo,45.233333333333334
+"nagaoka,-tokyo, japan-air-quality.csv",12,tokyo,41.0
+"nairobi-alliance girls high school, kenya-air-quality.csv",1,nairobi,40.9
+"nairobi-alliance girls high school, kenya-air-quality.csv",2,nairobi,34.892857142857146
+"nairobi-alliance girls high school, kenya-air-quality.csv",3,nairobi,34.83870967741935
+"nairobi-alliance girls high school, kenya-air-quality.csv",4,nairobi,20.733333333333334
+"nairobi-alliance girls high school, kenya-air-quality.csv",5,nairobi,17.258064516129032
+"nairobi-alliance girls high school, kenya-air-quality.csv",6,nairobi,43.333333333333336
+"nairobi-alliance girls high school, kenya-air-quality.csv",7,nairobi,38.70967741935484
+"nairobi-alliance girls high school, kenya-air-quality.csv",8,nairobi,31.580645161290324
+"nairobi-alliance girls high school, kenya-air-quality.csv",9,nairobi,29.4
+"nairobi-alliance girls high school, kenya-air-quality.csv",10,nairobi,22.30188679245283
+"nairobi-alliance girls high school, kenya-air-quality.csv",11,nairobi,26.816666666666666
+"nairobi-alliance girls high school, kenya-air-quality.csv",12,nairobi,34.166666666666664
+"new-delhi us embassy, india-air-quality.csv",1,new-delhi,245.7403846153846
+"new-delhi us embassy, india-air-quality.csv",2,new-delhi,186.65625
+"new-delhi us embassy, india-air-quality.csv",3,new-delhi,147.50666666666666
+"new-delhi us embassy, india-air-quality.csv",4,new-delhi,146.85555555555555
+"new-delhi us embassy, india-air-quality.csv",5,new-delhi,155.2826086956522
+"new-delhi us embassy, india-air-quality.csv",6,new-delhi,132.75280898876406
+"new-delhi us embassy, india-air-quality.csv",7,new-delhi,102.8804347826087
+"new-delhi us embassy, india-air-quality.csv",8,new-delhi,92.08333333333333
+"new-delhi us embassy, india-air-quality.csv",9,new-delhi,104.18181818181819
+"new-delhi us embassy, india-air-quality.csv",10,new-delhi,184.2888888888889
+"new-delhi us embassy, india-air-quality.csv",11,new-delhi,248.33333333333334
+"new-delhi us embassy, india-air-quality.csv",12,new-delhi,265.3333333333333
+"new-york, usa-air-quality.csv",1,new-york,49.650485436893206
+"new-york, usa-air-quality.csv",2,new-york,44.79761904761905
+"new-york, usa-air-quality.csv",3,new-york,35.795698924731184
+"new-york, usa-air-quality.csv",4,new-york,31.822222222222223
+"new-york, usa-air-quality.csv",5,new-york,29.419354838709676
+"new-york, usa-air-quality.csv",6,new-york,33.4
+"new-york, usa-air-quality.csv",7,new-york,41.344086021505376
+"new-york, usa-air-quality.csv",8,new-york,40.354838709677416
+"new-york, usa-air-quality.csv",9,new-york,31.091954022988507
+"new-york, usa-air-quality.csv",10,new-york,28.634408602150536
+"new-york, usa-air-quality.csv",11,new-york,34.955555555555556
+"new-york, usa-air-quality.csv",12,new-york,43.824175824175825
+paris-air-quality.csv,1,paris,69.8
+paris-air-quality.csv,2,paris,80.1547619047619
+paris-air-quality.csv,3,paris,64.87096774193549
+paris-air-quality.csv,4,paris,64.87777777777778
+paris-air-quality.csv,5,paris,62.935483870967744
+paris-air-quality.csv,6,paris,58.74666666666667
+paris-air-quality.csv,7,paris,59.596774193548384
+paris-air-quality.csv,8,paris,50.17741935483871
+paris-air-quality.csv,9,paris,52.233333333333334
+paris-air-quality.csv,10,paris,59.346666666666664
+paris-air-quality.csv,11,paris,65.6
+paris-air-quality.csv,12,paris,61.142857142857146
+"penrose,-auckland, new zealand-air-quality.csv",1,auckland,35.21917808219178
+"penrose,-auckland, new zealand-air-quality.csv",2,auckland,39.44444444444444
+"penrose,-auckland, new zealand-air-quality.csv",3,auckland,34.65625
+"penrose,-auckland, new zealand-air-quality.csv",4,auckland,38.92857142857143
+"penrose,-auckland, new zealand-air-quality.csv",5,auckland,44.645161290322584
+"penrose,-auckland, new zealand-air-quality.csv",6,auckland,44.5
+"penrose,-auckland, new zealand-air-quality.csv",7,auckland,38.30909090909091
+"penrose,-auckland, new zealand-air-quality.csv",8,auckland,36.29213483146067
+"penrose,-auckland, new zealand-air-quality.csv",9,auckland,34.627906976744185
+"penrose,-auckland, new zealand-air-quality.csv",10,auckland,41.97222222222222
+"penrose,-auckland, new zealand-air-quality.csv",11,auckland,49.4468085106383
+"penrose,-auckland, new zealand-air-quality.csv",12,auckland,38.75
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",1,san-francisco,38.93069306930693
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",2,san-francisco,30.349397590361445
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",3,san-francisco,27.666666666666668
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",4,san-francisco,31.90909090909091
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",5,san-francisco,28.923076923076923
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",6,san-francisco,33.80898876404494
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",7,san-francisco,31.41304347826087
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",8,san-francisco,35.38709677419355
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",9,san-francisco,39.916666666666664
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",10,san-francisco,40.52272727272727
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",11,san-francisco,56.71111111111111
+"san-francisco-arkansas street, san francisco, california-air-quality.csv",12,san-francisco,41.16483516483517
+"shanghai-us consulate, shanghai-air-quality.csv",1,shanghai,122.16279069767442
+"shanghai-us consulate, shanghai-air-quality.csv",2,shanghai,111.39285714285714
+"shanghai-us consulate, shanghai-air-quality.csv",3,shanghai,130.61290322580646
+"shanghai-us consulate, shanghai-air-quality.csv",4,shanghai,108.13333333333334
+"shanghai-us consulate, shanghai-air-quality.csv",5,shanghai,106.65957446808511
+"shanghai-us consulate, shanghai-air-quality.csv",6,shanghai,97.75862068965517
+"shanghai-us consulate, shanghai-air-quality.csv",7,shanghai,82.76666666666667
+"shanghai-us consulate, shanghai-air-quality.csv",8,shanghai,78.6774193548387
+"shanghai-us consulate, shanghai-air-quality.csv",9,shanghai,94.41509433962264
+"shanghai-us consulate, shanghai-air-quality.csv",10,shanghai,90.08196721311475
+"shanghai-us consulate, shanghai-air-quality.csv",11,shanghai,104.46551724137932
+"shanghai-us consulate, shanghai-air-quality.csv",12,shanghai,107.54098360655738
+"suhar,-moscow, moscow, russia-air-quality.csv",1,moscow,49.06976744186046
+"suhar,-moscow, moscow, russia-air-quality.csv",2,moscow,45.642857142857146
+"suhar,-moscow, moscow, russia-air-quality.csv",3,moscow,37.05882352941177
+"suhar,-moscow, moscow, russia-air-quality.csv",4,moscow,73.96666666666667
+"suhar,-moscow, moscow, russia-air-quality.csv",5,moscow,55.29032258064516
+"suhar,-moscow, moscow, russia-air-quality.csv",6,moscow,53.22
+"suhar,-moscow, moscow, russia-air-quality.csv",7,moscow,50.541666666666664
+"suhar,-moscow, moscow, russia-air-quality.csv",8,moscow,47.16129032258065
+"suhar,-moscow, moscow, russia-air-quality.csv",9,moscow,63.56363636363636
+"suhar,-moscow, moscow, russia-air-quality.csv",10,moscow,46.42857142857143
+"suhar,-moscow, moscow, russia-air-quality.csv",11,moscow,53.13461538461539
+"suhar,-moscow, moscow, russia-air-quality.csv",12,moscow,58.733333333333334
+toronto-air-quality.csv,1,toronto,38.640776699029125
+toronto-air-quality.csv,2,toronto,39.345238095238095
+toronto-air-quality.csv,3,toronto,33.913978494623656
+toronto-air-quality.csv,4,toronto,31.8
+toronto-air-quality.csv,5,toronto,36.40860215053763
+toronto-air-quality.csv,6,toronto,37.58888888888889
+toronto-air-quality.csv,7,toronto,43.70967741935484
+toronto-air-quality.csv,8,toronto,41.903225806451616
+toronto-air-quality.csv,9,toronto,38.56976744186046
+toronto-air-quality.csv,10,toronto,32.55913978494624
+toronto-air-quality.csv,11,toronto,35.06666666666667
+toronto-air-quality.csv,12,toronto,42.02197802197802
+"us-consulate, bogota, colombia-air-quality.csv",1,bogota,48.94949494949495
+"us-consulate, bogota, colombia-air-quality.csv",2,bogota,67.79761904761905
+"us-consulate, bogota, colombia-air-quality.csv",3,bogota,67.25882352941177
+"us-consulate, bogota, colombia-air-quality.csv",4,bogota,56.27777777777778
+"us-consulate, bogota, colombia-air-quality.csv",5,bogota,46.028985507246375
+"us-consulate, bogota, colombia-air-quality.csv",6,bogota,27.666666666666668
+"us-consulate, bogota, colombia-air-quality.csv",7,bogota,26.655913978494624
+"us-consulate, bogota, colombia-air-quality.csv",8,bogota,32.903225806451616
+"us-consulate, bogota, colombia-air-quality.csv",9,bogota,41.825
+"us-consulate, bogota, colombia-air-quality.csv",10,bogota,46.28
+"us-consulate, bogota, colombia-air-quality.csv",11,bogota,52.4
+"us-consulate, bogota, colombia-air-quality.csv",12,bogota,49.9875
