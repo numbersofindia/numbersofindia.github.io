@@ -1,7 +1,7 @@
 [
     {
         "title": "Take a Deep Breath",
-        "description": "Relative desnities of particulate matter (PM2.5) in different cities of the world" ,
+        "description": "Relative densities of particulate matter (PM2.5) in different cities of the world" ,
         "link": "https://numbersofindia.com/stories/pm25/",
         "img": "./res/imgs/pm25.png",
         "tags": ["news","politics"],
