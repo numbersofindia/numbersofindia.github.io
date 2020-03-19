@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>covid19</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta property="og:url" content="https://numbersofindia.com/stories/covid19/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="COVID19" />
+        <meta property="og:description" content="COVID19 Tracker for India"/>
+        <meta property="og:image" content="../../res/imgs/covid19.png" />
+        <meta charset="UTF-8">
+        {% include "ga.html" %}
+
+        {% include "imports_big.html" %}
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+
+
+    </head>
+
+    <body>
+        {% include "fb.html" %}
+        <div id="main">
+            {% include "navbar.html" %}
+            <div id="section-0">
+                <p class='head0 big-title'>COVID<span style="color:#c0392b;font-size: 90px">19</span></p>
+                <p class='head1'>[ Data updated at : <span style="color:#c0392b" id="updated-date"><i class="fas fa-spinner spinny"></i></span>
+                    ]</p>
+
+                <i class="fas fa-spinner spinny" id="spinner-1"></i>
+                <div class="row center-xs" style="padding-top: 20px" id='spinner-1-replacement'>
+                    <div class="col-md-5 col-xs-12 row center-xs">
+                        <div class="col-md-6 col-xs-12">
+                            <p class="spaced">WORLD</p>
+                            <div class="spike-container">
+                                <div class="row between-xs">
+                                    <p id="world-cases" class="big-numbers-0 col-xs-6"></p>
+                                    <div id="world-cases-plot" class="col-xs-6"></div>
+                                </div>
+                                <p class="big-numbers-text">Total Confirmed Cases</p>
+                            </div>
+                            <div class="spike-container">
+                                <div class="row  between-xs">
+                                    <div class="col-xs-6">
+                                        <p id="world-recovered" class="big-numbers-0"></p>
+                                        <p class="big-numbers-text2"><span id="world-recovered-perc" style="color:#27ae60"></span>
+                                            of cases</p>
+                                    </div>
+
+                                    <div id="world-recovered-plot" class="col-xs-6"></div>
+                                </div>
+
+                                <p class="big-numbers-text">Recovered</p>
+
+                            </div>
+                            <div class="spike-container">
+                                <div class="row  between-xs">
+                                    <div class="col-xs-6">
+                                        <p id="world-dead" class="big-numbers-0"></p>
+                                        <p class="big-numbers-text2"><span id="world-dead-perc" style="color:#c0392b"></span>
+                                            of cases</p>
+                                    </div>
+
+                                    <div id="world-dead-plot" class="col-xs-6"></div>
+                                </div>
+                                <p class="big-numbers-text">Deaths</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <p class="spaced">INDIA</p>
+                            <div class="spike-container">
+                                <div class="row between-xs">
+                                    <p id="india-cases" class="big-numbers-0 col-xs-6"></p>
+                                    <div id="india-cases-plot" class="col-xs-6"></div>
+                                </div>
+                                <p class="big-numbers-text">Total Confirmed Cases</p>
+                            </div>
+                            <div class="spike-container">
+                                <div class="row  between-xs">
+                                    <div class="col-xs-6">
+                                        <p id="india-recovered" class="big-numbers-0"></p>
+                                        <p class="big-numbers-text2"><span id="india-recovered-perc" style="color:#27ae60"></span>
+                                            of cases</p>
+                                    </div>
+
+                                    <div id="india-recovered-plot" class="col-xs-6"></div>
+                                </div>
+
+                                <p class="big-numbers-text">Recovered</p>
+
+                            </div>
+                            <div class="spike-container">
+                                <div class="row  between-xs">
+                                    <div class="col-xs-6">
+                                        <p id="india-dead" class="big-numbers-0"></p>
+                                        <p class="big-numbers-text2"><span id="india-dead-perc" style="color:#c0392b"></span>
+                                            of cases</p>
+                                    </div>
+
+                                    <div id="india-dead-plot" class="col-xs-6"></div>
+                                </div>
+                                <p class="big-numbers-text">Deaths</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-xs-12 row center-xs" style="min-height: 400px">
+                        <div   class="col-xs-12" id="deck-map">
+                                <canvas id="deck-canvas"></canvas>
+                        </div>
+                        <img class="chromatic-scale" src="https://raw.githubusercontent.com/d3/d3-scale-chromatic/master/img/Reds.png">
+                        <!-- <p>Total Number of Diagnosed Cases</p> -->
+                    </div>
+
+                </div>
+                <div id="tooltip"></div>
+                <div id="tooltip2"></div>
+
+            </div>
+
+
+            <div id="section-1" class="row">
+                <p class="cumu-title">Cumulative <span id="cumu-title">Confirmed Cases</span> vs Time</p>
+                
+                <div class="row center-xs" style="margin:20px !important">
+                    <div class="center-xs col-xs-12 col-md-4">
+                        <p style="padding:0px; margin: 0px">Scale</p>
+                            <div class="ui small buttons">
+                                    <button class="ui button active y-axis-scales" id="linear">Linear</button>
+                                    <div class="or"></div>
+                                    <button class="ui button y-axis-scales" id="log">Log</button>
+                                </div>
+                    </div>
+                    <div class="center-xs col-md-8 col-xs-12">
+                            <p style="padding:0px; margin: 0px">Category</p>
+                            <div class="ui small buttons">
+                                    <button class="ui button active category-button" id="cat-cases">Cases</button>
+                                    <div class="or"></div>
+                                    <button class="ui button category-button" id="cat-recovered">Recovered</button>
+                                    <div class="or"></div>
+                                    <button class="ui button category-button" id="cat-deaths">Deaths</button>
+                                </div>
+                        </div>
+                        
+                </div>
+                <div class="row" style="width: 100%">
+                    <div class="col-md-6 col-xs-12" id="line-plots-world">
+                        <select class="col-xs-12 ui search dropdown" multiple="" id='country-search'></select>
+                    </div>
+                    <div class="col-md-6 col-xs-12" id="line-plots-india">
+                        <select class="col-xs-12 ui search dropdown" multiple="" id='state-search'></select>
+                    </div>
+                </div>
+                <br><br><p>Made with ❤️ by Vivek</p>
+                
+            </div>
+            
+            <div id="section-2" class="row center-xs">
+                <div class="col-md-6 col-xs-10" style="text-align:left; margin-top: 20px">
+                        <p class="cumu-title"><img style="width:50px" src="https://i.pinimg.com/originals/ca/70/8b/ca708b26954a033648f13a8566604537.jpg">Notes </p>
+                        <h2>What Is This?</h2>
+                        <ul>
+                            <li>This is a dashboard to track Covid-19 infection spread in India. There are far better dashboards to track <a href="https://coronavirus.jhu.edu/map.html">world</a> or <a href="https://co.vid19.sg/">country</a> <a href="http://3g.dxy.cn/newh5/view/pneumonia">specific</a> numbers. I wanted to build this to share the seriousness, with my parents</li>
+                            <li>All data is from APIs developed by <a href="https://github.com/pomber/covid19">pomber</a> and <a href="https://github.com/amodm/api-covid19-in">amodm</a></li>
+                            <li>We need more testing, testing, testing.</li>
+                        </ul>
+
+                        <h2>How Can I Help?</h2>
+                        <ul>
+                            <h4>I don't think just pretty viz is all that useful at this point. We need more data.</h4>
+                            <li>More granular information on infection spread - cities/constituencies - so that people know what's happening where</li>
+                            <li>A timeline of what happened in other countries - school closures, transport shutdown etc so that Indians know what to expect and prepare for.</li>
+                            <li>An analysis identifying the path India is closely following, with possible predictions for up to 3 days.</li>
+                            <li>Age distribution in countries</li>
+                        </ul>
+                </div>
+                    
+                    
+                    
+            </div>
+    
+            {% include "sharing.html" %}
+            {% include "footer.html" %}
+
+        </div>
+    </body>
+
+</html>

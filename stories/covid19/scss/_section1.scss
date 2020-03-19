@@ -1,0 +1,95 @@
+$background-shade: #c0392b;
+$dark-shade: #333;
+$light-shade: #eee;
+$darkest: #122431;
+
+#section-1{
+    background-color:$light-shade;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#deck-map{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#line-plots-world{
+    height: 500px;
+    width: 100%;
+}
+#line-plots-india{
+    height: 500px;
+    width: 100%;
+}
+
+#section-1{
+    padding: 50px 10px 50px 10px;
+}
+
+.tick>line{
+    color: #aaa;
+    stroke-dasharray: 5 3;
+    opacity: 0.5;
+}
+
+.axis>path{
+    color: #aaa;
+    display: none;
+}
+.tick>text{
+    font-size: 12px;
+    font-family: 'Literata';
+    margin-top: 5px;
+}
+
+
+div#tooltip2 {	
+    position: absolute;			
+    text-align: center;			
+    width: 200px;					
+    height: 50px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: #333;
+    color: #fff;	
+    border: 0px;		
+    border-radius: 3px;			
+    pointer-events: none;			
+    display: none;
+}
+
+.text-title-plot-world,.text-title-plot-india{
+    font-size: 20px;
+    font-family: 'Literata';
+}
+
+
+.cumu-title{
+    font-size: 50px;
+    font-family: 'Josefin Sans';
+    margin: 0px;
+}
+
+#cumu-title{
+    color: #c0392b;
+}
+
+
+.ui.active.button{
+    background: #c0392b !important;
+    color: #fff !important;
+}
+
+
+
+#line-plots-world, #line-plots-india{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}

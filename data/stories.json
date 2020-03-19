@@ -1,5 +1,16 @@
 [
     {
+        "title": "Covid-19",
+        "description": "COVID19 Tracker for India" ,
+        "link": "https://numbersofindia.com/stories/covid19/",
+        "img": "./res/imgs/covid19.png",
+        "tags": ["news","politics"],
+        "date": "Mar 2020",
+        "read_time": 5,
+        "story_type": "infographic",
+        "author": "Vivek Aithal"
+    },
+    {
         "title": "Take a Deep Breath",
         "description": "Relative densities of particulate matter (PM2.5) in different cities of the world" ,
         "link": "https://numbersofindia.com/stories/pm25/",
