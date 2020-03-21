@@ -11,9 +11,16 @@ function section1(indiaAgg) {
 
     const stateLookupMap2Feed = {
         "Orissa": "Odisha",
-        "Jammu & Kashmir": "Union Territory of Jammu and Kashmir",
-        "Ladakh": "Union Territory of Ladakh"
+        "Jammu & Kashmir": "Jammu and Kashmir",
+        "Ladakh": "Ladakh"
     }
+
+    //Old
+    // const stateLookupMap2Feed = {
+    //     "Orissa": "Odisha",
+    //     "Jammu & Kashmir": "Union Territory of Jammu and Kashmir",
+    //     "Ladakh": "Union Territory of Ladakh"
+    // }
 
     const INITIAL_VIEW_STATE = {
         latitude: 23,
@@ -69,6 +76,7 @@ function section1(indiaAgg) {
 
 
     let feedStates = indiaAgg.data.regional.map(d => d.loc);
+    console.log("STATES : ",feedStates);
 
     let width = +d3.select('#deck-map').style('width').slice(0, -2);
     let height = +d3.select('#deck-map').style('height').slice(0, -2);
@@ -105,10 +113,13 @@ function section1(indiaAgg) {
                 getFillColor: f => {
                     let stateVal = 0
                     if (feedStates.includes(f.properties.st_name)) {
+                        // console.log(f.properties.st_name);
                         stateVal = indiaAgg.data.regional.filter(k => k.loc === f.properties.st_name)[0];
                         stateVal = stateVal.confirmedCasesIndian + stateVal.confirmedCasesForeign;
+                        // console.log('done');
                     }
                     else if (f.properties.st_name in stateLookupMap2Feed) {
+                        // console.log(f.properties.st_name);
                         let temp = stateLookupMap2Feed[f.properties.st_name];// console.log(stateLookupMap2Feed[f.properties.st_name],f.properties.st_name,stateLookupMap2Feed);
                         stateVal = indiaAgg.data.regional.filter(k => k.loc === temp)[0];
                         stateVal = stateVal.confirmedCasesIndian + stateVal.confirmedCasesForeign;
